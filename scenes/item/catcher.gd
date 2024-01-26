@@ -7,17 +7,26 @@ extends Node2D
 @export var base : Node
 @export var top : Node
 
+var last_stacked
+func add_new_item():
+	if last_stacked is StackedItem:
+		last_stacked.remote_transform_2d.remote_path = NodePath()
+	
+	var new_stacked = stacked_item.instantiate()
+	new_stacked.follow = last_stacked
+	add_child(new_stacked)
+	last_stacked = new_stacked
+	last_stacked.remote_transform_2d.remote_path = top.get_path()
+
+
 func _ready() -> void:
-	var last_stackable = base
-	for i in range(3):
-		var new_stackable = stacked_item.instantiate()
-		new_stackable.follow = last_stackable
-		add_child(new_stackable)
-		last_stackable = new_stackable
-		
-	last_stackable.remote_transform_2d.remote_path = top.get_path()
-	#top.reparent(last_stackable)
+	last_stacked = base
+	for i in range(1):
+		add_new_item()
 	
 func _process(delta: float) -> void:
 	base.global_position.x = clamp(get_global_mouse_position().x, border_left, border_right)
-		
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	add_new_item()
+	body.queue_free()

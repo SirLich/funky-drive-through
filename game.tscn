@@ -1,10 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://dcfett6ns4vqq"]
+[gd_scene load_steps=12 format=3 uid="uid://dcfett6ns4vqq"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_6brd1"]
 [ext_resource type="Texture2D" uid="uid://drfvkqsyrbt43" path="res://assets/temp/backgroundColorDesert.png" id="2_uip0o"]
-[ext_resource type="Texture2D" uid="uid://bqqde8a800xj0" path="res://assets/temp/giraffe_mask.png" id="3_67ex5"]
 [ext_resource type="PackedScene" uid="uid://bde5jwauuhx81" path="res://scenes/item/catcher.tscn" id="4_2i66j"]
 [ext_resource type="PackedScene" uid="uid://d1nn1ff7rwlbn" path="res://scenes/item/item.tscn" id="5_1bqwg"]
+[ext_resource type="Texture2D" uid="uid://bpedayw2v72jn" path="res://assets/characters/bird/face_back_angry.png" id="5_mvmws"]
+[ext_resource type="Texture2D" uid="uid://cqhcfrfmhrgtr" path="res://assets/characters/bird/face_front_angry.png" id="6_hsmo6"]
+[ext_resource type="Texture2D" uid="uid://dlah1mi3eps8t" path="res://assets/characters/bird/neck_angry.png" id="7_wsicm"]
+[ext_resource type="Texture2D" uid="uid://cjcky81ug0pgt" path="res://assets/characters/bird/beak_angry.png" id="8_lr47p"]
+[ext_resource type="Texture2D" uid="uid://buu2ikkln76so" path="res://assets/characters/bird/eyebrows_angry.png" id="9_fpv8e"]
+[ext_resource type="Texture2D" uid="uid://8re8xql27c08" path="res://assets/characters/bird/tongue.png" id="10_6u7nc"]
 
 [sub_resource type="Environment" id="Environment_1begj"]
 
@@ -34,9 +39,12 @@ offset_right = 1675.0
 offset_bottom = 1205.0
 color = Color(0.192157, 0.254902, 0, 0.584314)
 
-[node name="GiraffeMask" type="Sprite2D" parent="Art"]
-position = Vector2(358, 791)
-texture = ExtResource("3_67ex5")
+[node name="ColorRect2" type="ColorRect" parent="Art"]
+offset_left = -52.0
+offset_top = -82.0
+offset_right = 2407.0
+offset_bottom = 1205.0
+color = Color(0.380392, 0.513726, 0.776471, 0.584314)
 
 [node name="Catcher" parent="." instance=ExtResource("4_2i66j")]
 position = Vector2(1221, 1015)
@@ -46,3 +54,26 @@ position = Vector2(1203, 49)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_1begj")
+
+[node name="Bird" type="Node2D" parent="."]
+position = Vector2(359, 703)
+scale = Vector2(0.365, 0.365)
+metadata/_edit_group_ = true
+
+[node name="FaceBack" type="Sprite2D" parent="Bird"]
+texture = ExtResource("5_mvmws")
+
+[node name="Neck" type="Sprite2D" parent="Bird"]
+texture = ExtResource("7_wsicm")
+
+[node name="FaceFront" type="Sprite2D" parent="Bird"]
+texture = ExtResource("6_hsmo6")
+
+[node name="Beak" type="Sprite2D" parent="Bird"]
+texture = ExtResource("8_lr47p")
+
+[node name="Eyebrows" type="Sprite2D" parent="Bird"]
+texture = ExtResource("9_fpv8e")
+
+[node name="Tongue" type="Sprite2D" parent="Bird"]
+texture = ExtResource("10_6u7nc")
