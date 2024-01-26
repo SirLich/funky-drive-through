@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwo33wdcofuqm"]
+
+[ext_resource type="Script" path="res://scenes/item/stacked_item.gd" id="1_q6wav"]
+[ext_resource type="Texture2D" uid="uid://0phwuakw03kd" path="res://assets/temp/genericItem_color_116.png" id="1_rst4p"]
+
+[node name="StackedItem" type="Node2D"]
+script = ExtResource("1_q6wav")
+
+[node name="Follower" type="Sprite2D" parent="."]
+position = Vector2(26, -11)
+rotation = 1.03479
+texture = ExtResource("1_rst4p")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
