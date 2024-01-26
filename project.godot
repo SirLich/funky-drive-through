@@ -23,6 +23,10 @@ window/size/mode=3
 window/size/borderless=true
 window/stretch/mode="viewport"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/softbody2d/plugin.cfg")
+
 [input]
 
 exit={

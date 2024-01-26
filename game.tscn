@@ -1,6 +1,48 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcfett6ns4vqq"]
+[gd_scene load_steps=7 format=3 uid="uid://dcfett6ns4vqq"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_6brd1"]
+[ext_resource type="Texture2D" uid="uid://drfvkqsyrbt43" path="res://assets/temp/backgroundColorDesert.png" id="2_uip0o"]
+[ext_resource type="Texture2D" uid="uid://bqqde8a800xj0" path="res://assets/temp/giraffe_mask.png" id="3_67ex5"]
+[ext_resource type="PackedScene" uid="uid://bde5jwauuhx81" path="res://scenes/item/catcher.tscn" id="4_2i66j"]
+[ext_resource type="PackedScene" uid="uid://d1nn1ff7rwlbn" path="res://scenes/item/item.tscn" id="5_1bqwg"]
+
+[sub_resource type="Environment" id="Environment_1begj"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_6brd1")
+
+[node name="Art" type="Node2D" parent="."]
+
+[node name="Background" type="Node2D" parent="Art"]
+position = Vector2(17, 96)
+scale = Vector2(0.722255, 0.722255)
+
+[node name="BackgroundColorDesert2" type="Sprite2D" parent="Art/Background"]
+position = Vector2(2386.97, 629.971)
+scale = Vector2(1.56999, 1.56999)
+texture = ExtResource("2_uip0o")
+
+[node name="BackgroundColorDesert" type="Sprite2D" parent="Art/Background"]
+position = Vector2(772, 628)
+scale = Vector2(1.58691, 1.58691)
+texture = ExtResource("2_uip0o")
+
+[node name="ColorRect" type="ColorRect" parent="Art"]
+offset_left = 788.0
+offset_top = -80.0
+offset_right = 1675.0
+offset_bottom = 1205.0
+color = Color(0.192157, 0.254902, 0, 0.584314)
+
+[node name="GiraffeMask" type="Sprite2D" parent="Art"]
+position = Vector2(358, 791)
+texture = ExtResource("3_67ex5")
+
+[node name="Catcher" parent="." instance=ExtResource("4_2i66j")]
+position = Vector2(1221, 1015)
+
+[node name="Item" parent="." instance=ExtResource("5_1bqwg")]
+position = Vector2(1203, 49)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1begj")
