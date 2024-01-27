@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dcfett6ns4vqq"]
+[gd_scene load_steps=8 format=3 uid="uid://dcfett6ns4vqq"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_6brd1"]
 [ext_resource type="Texture2D" uid="uid://drfvkqsyrbt43" path="res://assets/temp/backgroundColorDesert.png" id="2_uip0o"]
 [ext_resource type="PackedScene" uid="uid://bde5jwauuhx81" path="res://scenes/item/catcher.tscn" id="4_2i66j"]
 [ext_resource type="PackedScene" uid="uid://d1nn1ff7rwlbn" path="res://scenes/item/item.tscn" id="5_1bqwg"]
 [ext_resource type="PackedScene" uid="uid://bwckprmdmmhxv" path="res://scenes/bird.tscn" id="5_8yo1p"]
+[ext_resource type="Script" path="res://dropper.gd" id="6_ebwai"]
 
 [sub_resource type="Environment" id="Environment_1begj"]
 
@@ -52,3 +53,13 @@ environment = SubResource("Environment_1begj")
 
 [node name="Bird" parent="." instance=ExtResource("5_8yo1p")]
 position = Vector2(374, 726)
+
+[node name="Dropper" type="Node2D" parent="."]
+position = Vector2(827, -417)
+script = ExtResource("6_ebwai")
+item = ExtResource("5_1bqwg")
+
+[node name="Timer" type="Timer" parent="Dropper"]
+autostart = true
+
+[connection signal="timeout" from="Dropper/Timer" to="Dropper" method="_on_timer_timeout"]
