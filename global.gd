@@ -13,6 +13,8 @@ func get_recipe():
 signal item_collected(item : ItemType)
 signal bad_item_collected(item : ItemType, count : int)
 signal good_item_collected(item : ItemType, count : int)
+signal reached_end_screen(did_win: bool)
+
 signal bun_collected()
 signal tutorial_closed()
 

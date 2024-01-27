@@ -538,6 +538,7 @@ animations = [{
 }]
 
 [node name="Bird" type="Node2D"]
+process_mode = 3
 scale = Vector2(0.365, 0.365)
 script = ExtResource("1_85o5u")
 metadata/_edit_group_ = true

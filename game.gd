@@ -67,7 +67,9 @@ func end_round():
 	get_tree().call_group('dropped_item', 'queue_free')
 	
 	finish_screen.visible = true
+	Global.reached_end_screen.emit(did_win())
 	if did_win():
+
 		finish_button_text.text = "Next"
 		success_text.text = "Success!"
 	else:
