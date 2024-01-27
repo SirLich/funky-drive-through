@@ -17,71 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://ceeggdivsrn8n" path="res://assets/characters/bird/beak_neutral.png" id="12_clirs"]
 [ext_resource type="Texture2D" uid="uid://mdsvi7ibxlp2" path="res://assets/characters/bird/none.png" id="16_3lchg"]
 
-[sub_resource type="Animation" id="Animation_u6k1x"]
-resource_name = "angry"
-length = 0.5
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("FaceGroup/FaceBack:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [&"angry", &"neutral", &"angry"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Neck:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"angry"]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("FaceGroup/FaceFront:animation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [&"angry", &"neutral", &"angry"]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("FaceGroup/Beak:animation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"angry"]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("FaceGroup:rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [-0.153589, 0.305433, -0.153589, 0.0, -0.153589, 0.0, -0.153589, 0.0]
-}
-
 [sub_resource type="Animation" id="Animation_f75js"]
 length = 0.001
 tracks/0/type = "value"
@@ -169,8 +104,8 @@ tracks/6/keys = {
 "values": [-0.153589]
 }
 
-[sub_resource type="Animation" id="Animation_sw2o8"]
-resource_name = "neutral"
+[sub_resource type="Animation" id="Animation_u6k1x"]
+resource_name = "angry"
 length = 0.5
 step = 0.05
 tracks/0/type = "value"
@@ -180,10 +115,10 @@ tracks/0/path = NodePath("FaceGroup/FaceBack:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [&"neutral"]
+"values": [&"angry", &"neutral", &"angry"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -195,7 +130,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"neutral"]
+"values": [&"angry"]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -204,10 +139,10 @@ tracks/2/path = NodePath("FaceGroup/FaceFront:animation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [&"neutral"]
+"values": [&"angry", &"neutral", &"angry"]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -219,31 +154,19 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"neutral"]
+"values": [&"angry"]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Accents:animation")
+tracks/4/path = NodePath("FaceGroup:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"neutral"]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("FaceGroup/Tongue:animation")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"neutral"]
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.153589, 0.305433, -0.153589, 0.0, -0.153589, 0.0, -0.153589, 0.0]
 }
 
 [sub_resource type="Animation" id="Animation_alt8v"]
@@ -333,6 +256,83 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [-0.153589, 0.305433, -0.153589, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_sw2o8"]
+resource_name = "neutral"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FaceGroup/FaceBack:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"neutral"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Neck:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"neutral"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FaceGroup/FaceFront:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"neutral"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FaceGroup/Beak:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"neutral"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Accents:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"neutral"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("FaceGroup/Tongue:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"neutral"]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_igwcl"]
@@ -502,13 +502,11 @@ speed_scale = 0.6
 
 [node name="Neck" type="AnimatedSprite2D" parent="."]
 modulate = Color(0.835294, 0.866667, 0.878431, 1)
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_whi28")
 animation = &"angry"
 
 [node name="FaceGroup" type="Node2D" parent="."]
 rotation = -0.153589
-scale = Vector2(1, 1)
 
 [node name="FaceBack" type="AnimatedSprite2D" parent="FaceGroup"]
 sprite_frames = SubResource("SpriteFrames_c36ac")

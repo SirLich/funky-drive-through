@@ -1,5 +1,8 @@
 extends Node2D
 
+@onready var fail_sound: AudioStreamPlayer = $Sounds/FailSound
+@onready var success_sound: AudioStreamPlayer = $Sounds/SuccessSound
+
 @onready var items: HBoxContainer = $HUD/Items
 @onready var recipe_label: Label = $HUD/RecipeLabel
 @onready var dropper: Dropper = $Dropper
@@ -70,10 +73,11 @@ func end_round():
 	finish_screen.visible = true
 	Global.reached_end_screen.emit(did_win())
 	if did_win():
-		
+		success_sound.play()
 		finish_button_text.text = "Next"
 		success_text.text = "Success!"
 	else:
+		fail_sound.play()
 		finish_button_text.text = "Restart"
 		success_text.text = "Failure!"
 	
