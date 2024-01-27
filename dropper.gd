@@ -9,7 +9,7 @@ class_name Dropper
 var good_items : Array[ItemType]
 var bad_items : Array[ItemType]
 
-@export var bun_chance = 0.1
+@export var bun_chance = 0.5
 @export var good_chance = 0.3
 
 var recipe
