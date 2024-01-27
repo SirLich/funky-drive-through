@@ -129,6 +129,8 @@ func prepare_for_recipe(recipe : Recipe):
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	hud.prepare_for_recipe(recipe)
 	
+	print(recipe.gravity)
+	PhysicsServer2D.area_set_param(get_viewport().find_world_2d().space, PhysicsServer2D.AREA_PARAM_GRAVITY, recipe.gravity)
 	var new_character = recipe.character.instantiate()
 	spawn_position.add_child(new_character)
 	

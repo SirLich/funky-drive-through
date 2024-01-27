@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://c10uio2gylx77"]
+
+[ext_resource type="Script" path="res://recipe_item.gd" id="1_i1x2l"]
+[ext_resource type="Script" path="res://recipe.gd" id="1_wdnct"]
+
+[sub_resource type="Resource" id="Resource_5akaj"]
+script = ExtResource("1_i1x2l")
+num = 0
+
+[sub_resource type="Resource" id="Resource_vqmff"]
+script = ExtResource("1_i1x2l")
+num = 0
+
+[sub_resource type="Resource" id="Resource_r0sh7"]
+script = ExtResource("1_i1x2l")
+num = 0
+
+[resource]
+script = ExtResource("1_wdnct")
+name = "Normal Burger"
+ingredients = Array[ExtResource("1_i1x2l")]([SubResource("Resource_5akaj"), SubResource("Resource_vqmff"), SubResource("Resource_r0sh7")])
+allowed_mistakes = 0
+good_chance = 0.5
+bun_chance = 0.2
+gravity = 500
