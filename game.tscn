@@ -1,16 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://dcfett6ns4vqq"]
+[gd_scene load_steps=11 format=3 uid="uid://dcfett6ns4vqq"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_6brd1"]
+[ext_resource type="Resource" uid="uid://c0li33aqx7fvj" path="res://recipes/bug_burger.tres" id="2_jxd6d"]
 [ext_resource type="Texture2D" uid="uid://drfvkqsyrbt43" path="res://assets/temp/backgroundColorDesert.png" id="2_uip0o"]
 [ext_resource type="PackedScene" uid="uid://bde5jwauuhx81" path="res://scenes/item/catcher.tscn" id="4_2i66j"]
 [ext_resource type="PackedScene" uid="uid://d1nn1ff7rwlbn" path="res://scenes/item/item.tscn" id="5_1bqwg"]
 [ext_resource type="PackedScene" uid="uid://bwckprmdmmhxv" path="res://scenes/bird.tscn" id="5_8yo1p"]
 [ext_resource type="Script" path="res://dropper.gd" id="6_ebwai"]
+[ext_resource type="PackedScene" uid="uid://blv1sdwd4eyiq" path="res://scenes/item_box_ui.tscn" id="7_5rb7w"]
 
 [sub_resource type="Environment" id="Environment_1begj"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_bx1hl"]
+font_size = 60
+font_color = Color(0, 0, 0, 1)
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_6brd1")
+default_recipe = ExtResource("2_jxd6d")
 
 [node name="Art" type="Node2D" parent="."]
 
@@ -62,5 +69,30 @@ item = ExtResource("5_1bqwg")
 
 [node name="Timer" type="Timer" parent="Dropper"]
 autostart = true
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RecipeLabel" type="Label" parent="HUD"]
+layout_mode = 0
+offset_right = 788.0
+offset_bottom = 83.0
+text = "Flaming Hot Cheetos"
+label_settings = SubResource("LabelSettings_bx1hl")
+horizontal_alignment = 1
+
+[node name="Items" type="HBoxContainer" parent="HUD"]
+layout_mode = 1
+offset_left = 29.0
+offset_top = 103.0
+offset_right = 229.0
+offset_bottom = 357.0
+theme_override_constants/separation = 50
+
+[node name="ItemBoxUI" parent="HUD/Items" instance=ExtResource("7_5rb7w")]
+layout_mode = 2
 
 [connection signal="timeout" from="Dropper/Timer" to="Dropper" method="_on_timer_timeout"]
