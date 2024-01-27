@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ogsw82lf1u2j"]
+
+[ext_resource type="Texture2D" uid="uid://bv1iqqog0x8rs" path="res://assets/items/worm_fall.png" id="1_wqm2c"]
+[ext_resource type="Texture2D" uid="uid://bmx21jgmesvb" path="res://assets/items/eye_closed.png" id="2_mled2"]
+[ext_resource type="Texture2D" uid="uid://ddh8r7f7bwrv1" path="res://assets/items/eye_open.png" id="3_ufkxf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_egfno"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mled2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ufkxf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Sprites" type="Node2D"]
+scale = Vector2(0.1, 0.1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.772549, 0.388235, 0.513726, 1)
+texture = ExtResource("1_wqm2c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_egfno")
+autoplay = "default"
+frame_progress = 0.994475

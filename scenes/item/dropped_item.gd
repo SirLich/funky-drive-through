@@ -1,11 +1,17 @@
 extends RigidBody2D
 class_name DroppedItem
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var item : ItemType
+@export var generic_dropped_scene : PackedScene
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func configure_for_item(item : ItemType):
+	self.item = item
+	
+	var new_dropped_scene
+	if item.dropped_scene:
+		new_dropped_scene = item.dropped_scene.instantiate()
+	else:
+		new_dropped_scene = generic_dropped_scene.instantiate()
+		new_dropped_scene.texture = item.icon
+		
+	add_child(new_dropped_scene)
