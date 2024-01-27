@@ -407,11 +407,13 @@ _data = {
 }
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_farcd"]
+random_pitch = 1.2
 streams_count = 1
 stream_0/stream = ExtResource("2_fhbmp")
 stream_0/weight = 1.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_n4rkn"]
+random_pitch = 1.2
 streams_count = 1
 stream_0/stream = ExtResource("3_qon71")
 stream_0/weight = 1.0

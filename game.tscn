@@ -17,6 +17,7 @@
 [ext_resource type="Script" path="res://tutorial.gd" id="10_vqbed"]
 [ext_resource type="Texture2D" uid="uid://bnbhditt20lap" path="res://assets/symbols.png" id="11_18tpj"]
 [ext_resource type="Script" path="res://kill_zone.gd" id="13_e048j"]
+[ext_resource type="Texture2D" uid="uid://7uytjmrtwfaq" path="res://assets/frame_result.png" id="14_6ags6"]
 
 [sub_resource type="Environment" id="Environment_1begj"]
 
@@ -29,18 +30,13 @@ font_size = 35
 
 [sub_resource type="LabelSettings" id="LabelSettings_bx1hl"]
 font_size = 60
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dlwcq"]
-bg_color = Color(0.403922, 0.266667, 0.286275, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-corner_detail = 20
+shadow_size = 26
+shadow_color = Color(0, 0, 0, 0.866667)
 
 [sub_resource type="LabelSettings" id="LabelSettings_f44vb"]
 font_size = 100
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0b81q"]
 atlas = ExtResource("11_18tpj")
@@ -147,8 +143,10 @@ horizontal_alignment = 1
 
 [node name="RecipeLabel" type="Label" parent="HUD"]
 layout_mode = 0
-offset_right = 788.0
-offset_bottom = 83.0
+offset_left = 8.0
+offset_top = 29.0
+offset_right = 796.0
+offset_bottom = 112.0
 text = "Flaming Hot Cheetos"
 label_settings = SubResource("LabelSettings_bx1hl")
 horizontal_alignment = 1
@@ -170,20 +168,21 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ColorRect" type="Panel" parent="HUD/FinishScreen"]
+[node name="ColorRect" type="TextureRect" parent="HUD/FinishScreen"]
 layout_mode = 0
-offset_left = 819.0
-offset_top = 84.0
-offset_right = 1673.0
-offset_bottom = 576.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_dlwcq")
+offset_left = -1.0
+offset_top = -27.0
+offset_right = 1919.0
+offset_bottom = 1053.0
+texture = ExtResource("14_6ags6")
+expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HUD/FinishScreen/ColorRect"]
 layout_mode = 0
-offset_left = -3.0
-offset_top = 1.0
-offset_right = 482.0
-offset_bottom = 482.0
+offset_left = 979.0
+offset_top = 134.0
+offset_right = 1464.0
+offset_bottom = 615.0
 
 [node name="SuccessText" type="Label" parent="HUD/FinishScreen/ColorRect/VBoxContainer"]
 layout_mode = 2
@@ -243,10 +242,10 @@ label_settings = SubResource("LabelSettings_akisb")
 [node name="FinishButton" type="TextureButton" parent="HUD/FinishScreen/ColorRect"]
 modulate = Color(0.533333, 0.643137, 0.862745, 1)
 layout_mode = 0
-offset_left = 289.0
-offset_top = 329.0
-offset_right = 563.0
-offset_bottom = 488.0
+offset_left = 1102.0
+offset_top = 463.0
+offset_right = 1376.0
+offset_bottom = 622.0
 texture_normal = SubResource("AtlasTexture_5d3lm")
 ignore_texture_size = true
 stretch_mode = 0

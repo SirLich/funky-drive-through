@@ -17,11 +17,13 @@
 [ext_resource type="Texture2D" uid="uid://bte2evlm1g4bo" path="res://assets/characters/dog/nose_neutral.png" id="13_ma180"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_vsc1p"]
+random_pitch = 1.2
 streams_count = 1
 stream_0/stream = ExtResource("2_pomar")
 stream_0/weight = 1.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_3hdi5"]
+random_pitch = 1.2
 streams_count = 1
 stream_0/stream = ExtResource("2_rr1v4")
 stream_0/weight = 1.0
