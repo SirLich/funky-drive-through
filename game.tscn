@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dcfett6ns4vqq"]
+[gd_scene load_steps=12 format=3 uid="uid://dcfett6ns4vqq"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_6brd1"]
 [ext_resource type="Resource" uid="uid://c0li33aqx7fvj" path="res://recipes/bug_burger.tres" id="2_jxd6d"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bwckprmdmmhxv" path="res://scenes/bird.tscn" id="5_8yo1p"]
 [ext_resource type="Script" path="res://dropper.gd" id="6_ebwai"]
 [ext_resource type="PackedScene" uid="uid://blv1sdwd4eyiq" path="res://scenes/item_box_ui.tscn" id="7_5rb7w"]
+[ext_resource type="Script" path="res://hud.gd" id="9_k1kde"]
 
 [sub_resource type="Environment" id="Environment_1begj"]
 
@@ -53,9 +54,6 @@ color = Color(0.380392, 0.513726, 0.776471, 0.584314)
 [node name="Catcher" parent="." instance=ExtResource("4_2i66j")]
 position = Vector2(1221, 1015)
 
-[node name="Item" parent="." instance=ExtResource("5_1bqwg")]
-position = Vector2(1203, 49)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_1begj")
 
@@ -76,6 +74,8 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("9_k1kde")
+item_box_ui = ExtResource("7_5rb7w")
 
 [node name="RecipeLabel" type="Label" parent="HUD"]
 layout_mode = 0

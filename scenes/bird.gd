@@ -17,7 +17,7 @@ func become_happy():
 func on_animation_finished(anim_name):
 	become_neutral()
 
-func on_item_collected():
+func on_item_collected(item_type : ItemType):
 	become_angry()
 		
 func _ready() -> void:

@@ -1,4 +1,5 @@
 extends VBoxContainer
+class_name ItemBoxUI
 
 @onready var texture_rect: TextureRect = $ItemBox/TextureRect
 @onready var name_label: Label = $NameLabel

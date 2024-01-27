@@ -28,6 +28,6 @@ func _process(delta: float) -> void:
 	base.global_position.x = clamp(get_global_mouse_position().x, border_left, border_right)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	Global.item_collected.emit()
+	Global.item_collected.emit(body.item)
 	add_new_item()
 	body.queue_free()
