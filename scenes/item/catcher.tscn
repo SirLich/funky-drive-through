@@ -1,12 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bde5jwauuhx81"]
+[gd_scene load_steps=5 format=3 uid="uid://bde5jwauuhx81"]
 
 [ext_resource type="Script" path="res://scenes/item/catcher.gd" id="1_jd7dh"]
 [ext_resource type="Texture2D" uid="uid://0phwuakw03kd" path="res://assets/temp/genericItem_color_116.png" id="1_yrgt3"]
 [ext_resource type="PackedScene" uid="uid://cwo33wdcofuqm" path="res://scenes/item/stacked_item.tscn" id="2_b1twt"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kar00"]
-radius = 22.9945
-height = 106.009
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v15wv"]
 radius = 40.4969
@@ -17,17 +13,10 @@ stacked_item = ExtResource("2_b1twt")
 base = NodePath("Base")
 top = NodePath("Top")
 
-[node name="Top" type="AnimatableBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
-position = Vector2(2, 3)
-rotation = 1.56562
-shape = SubResource("CapsuleShape2D_kar00")
-
-[node name="Area2D" type="Area2D" parent="Top"]
+[node name="Top" type="Area2D" parent="."]
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Top/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
 shape = SubResource("CircleShape2D_v15wv")
 
 [node name="Base" type="Node2D" parent="."]
@@ -37,4 +26,4 @@ position = Vector2(27, -3)
 rotation = 1.03479
 texture = ExtResource("1_yrgt3")
 
-[connection signal="body_entered" from="Top/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Top" to="." method="_on_area_2d_body_entered"]

@@ -13,11 +13,15 @@ func become_happy():
 	animation_player.play("happy")
 	animation_player.animation_finished.connect(on_animation_finished)
 	
-func on_animation_finished():
+func on_animation_finished(anim_name):
 	become_neutral()
-	
+
+func on_item_collected():
+	become_angry()
+		
 func _ready() -> void:
 	become_neutral()
+	Global.item_collected.connect(on_item_collected)
 
 func _process(delta: float) -> void:
 	pass

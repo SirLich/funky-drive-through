@@ -52,7 +52,8 @@ position = Vector2(1203, 49)
 environment = SubResource("Environment_1begj")
 
 [node name="Bird" parent="." instance=ExtResource("5_8yo1p")]
-position = Vector2(374, 726)
+position = Vector2(392, 789)
+scale = Vector2(0.295, 0.295)
 
 [node name="Dropper" type="Node2D" parent="."]
 position = Vector2(827, -417)
