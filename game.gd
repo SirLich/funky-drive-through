@@ -6,13 +6,13 @@ extends Node2D
 @onready var hud: Control = $HUD
 
 @export var item_box_ui : PackedScene
-@export var default_recipe : Recipe
 
 var is_tutorial = true
 
 # Current recipe
 var recipe : Recipe
 var food_counts = {}
+var bad_count = 0
 
 @onready var tutorial: Control = $Tutorial
 		
@@ -30,14 +30,17 @@ func is_food_good(check_type : ItemType):
 func on_item_collected(item : ItemType):
 	if item == Global.top_bun:
 		Global.bun_collected.emit()
+		await get_tree().create_timer(0.1).timeout
+		get_tree().paused = true
 	else:
 		if is_food_good(item):
 			Global.good_item_collected.emit(item, food_counts[item])
 		else:
-			Global.bad_item_collected.emit(item, food_counts[item])
+			bad_count += 1
+			Global.bad_item_collected.emit(item, bad_count)
 
 func _ready() -> void:
-	prepare_for_recipe(default_recipe)
+	prepare_for_recipe(Global.get_recipe())
 	Global.item_collected.connect(on_item_collected)
 	
 func prepare_for_recipe(recipe : Recipe):
@@ -47,6 +50,7 @@ func prepare_for_recipe(recipe : Recipe):
 	
 	# Just setup recipe stuff
 	food_counts.clear()
+	bad_count = 0
 	for item in Global.all_items:
 		food_counts[item] = 0
 	food_counts[Global.top_bun] = 0

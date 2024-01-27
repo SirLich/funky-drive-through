@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://baau16ndim5ve"]
+
+[ext_resource type="Texture2D" uid="uid://cnd1kj7020uls" path="res://assets/frame.png" id="1_bkd0v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vl60s"]
+font_size = 100
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7nb0"]
+atlas = ExtResource("1_bkd0v")
+region = Rect2(1230.78, 128.59, 801.272, 463.295)
+
+[sub_resource type="LabelSettings" id="LabelSettings_whgmt"]
+font_size = 70
+
+[node name="EndScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1922.0
+offset_bottom = 1095.0
+color = Color(0.764706, 0.596078, 0.384314, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -323.0
+offset_top = 139.0
+offset_right = 350.0
+offset_bottom = 276.0
+grow_horizontal = 2
+text = "YOU CREATED"
+label_settings = SubResource("LabelSettings_vl60s")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 655.0
+offset_top = 656.0
+offset_right = 1258.0
+offset_bottom = 1005.0
+texture_normal = SubResource("AtlasTexture_d7nb0")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 133.0
+offset_right = 360.0
+offset_bottom = 229.0
+text = "Next
+"
+label_settings = SubResource("LabelSettings_whgmt")

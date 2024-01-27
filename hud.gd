@@ -12,6 +12,9 @@ func get_box_by_type(item : ItemType) -> ItemBoxUI:
 			return child
 	return null
 	
+
+func on_bad_item_collected(item: ItemType, count):
+	$Mistakes/MistakeLabel.text = "Wrong: " + str(count)
 	
 func on_good_item_collected(item : ItemType, count):
 	var box_child = get_box_by_type(item)
@@ -33,7 +36,7 @@ func prepare_for_recipe(recipe : Recipe):
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Global.good_item_collected.connect(on_good_item_collected)
-
+	Global.bad_item_collected.connect(on_bad_item_collected)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
