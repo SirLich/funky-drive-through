@@ -4,7 +4,7 @@
 [ext_resource type="Resource" uid="uid://c0li33aqx7fvj" path="res://recipes/bug_burger.tres" id="2_jxd6d"]
 [ext_resource type="Texture2D" uid="uid://drfvkqsyrbt43" path="res://assets/temp/backgroundColorDesert.png" id="2_uip0o"]
 [ext_resource type="PackedScene" uid="uid://bde5jwauuhx81" path="res://scenes/item/catcher.tscn" id="4_2i66j"]
-[ext_resource type="PackedScene" uid="uid://d1nn1ff7rwlbn" path="res://scenes/item/DroppedItem.tscn" id="5_1bqwg"]
+[ext_resource type="PackedScene" uid="uid://d1nn1ff7rwlbn" path="res://scenes/item/dropped_item.tscn" id="5_1bqwg"]
 [ext_resource type="PackedScene" uid="uid://bwckprmdmmhxv" path="res://scenes/bird.tscn" id="5_8yo1p"]
 [ext_resource type="Script" path="res://dropper.gd" id="6_ebwai"]
 [ext_resource type="PackedScene" uid="uid://blv1sdwd4eyiq" path="res://scenes/item_box_ui.tscn" id="7_5rb7w"]
@@ -66,10 +66,7 @@ scale = Vector2(0.295, 0.295)
 [node name="Dropper" type="Node2D" parent="."]
 position = Vector2(827, -417)
 script = ExtResource("6_ebwai")
-max_width = null
-drop_time_min = null
-drop_time_max = null
-item = ExtResource("5_1bqwg")
+item_scene = ExtResource("5_1bqwg")
 
 [node name="Timer" type="Timer" parent="Dropper"]
 autostart = true

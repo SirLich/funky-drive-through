@@ -39,7 +39,7 @@ func get_random_item():
 	
 func drop_item():
 	var item = get_random_item()
-	var new_drop = v.instantiate()
+	var new_drop = item_scene.instantiate()
 	add_child(new_drop)
 	new_drop.configure_for_item(item)
 	new_drop.global_position.y = self.global_position.y
