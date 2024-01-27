@@ -34,7 +34,8 @@ func on_item_collected(item : ItemType):
 	if item == Global.top_bun:
 		Global.bun_collected.emit()
 		await get_tree().create_timer(0.15).timeout
-		get_tree().change_scene_to_packed(end_scene)
+		get_tree().paused = true
+		#get_tree().change_scene_to_packed(end_scene)
 	else:
 		if is_food_good(item):
 			Global.good_item_collected.emit(item, food_counts[item])

@@ -42,6 +42,11 @@ offset_bottom = 1090.0
 texture = ExtResource("4_e5ape")
 expand_mode = 1
 
+[node name="ColorRect" type="ColorRect" parent="Art"]
+offset_right = 756.0
+offset_bottom = 133.0
+color = Color(0.403922, 0.266667, 0.286275, 1)
+
 [node name="Catcher" parent="." instance=ExtResource("4_2i66j")]
 position = Vector2(1229, 946)
 
@@ -70,10 +75,10 @@ item_box_ui = ExtResource("7_5rb7w")
 
 [node name="Mistakes" type="VBoxContainer" parent="HUD"]
 layout_mode = 0
-offset_left = 657.0
-offset_top = 148.0
-offset_right = 785.0
-offset_bottom = 402.0
+offset_left = 623.0
+offset_top = 146.0
+offset_right = 751.0
+offset_bottom = 400.0
 metadata/_edit_group_ = true
 
 [node name="ItemBox" type="TextureRect" parent="HUD/Mistakes"]
@@ -150,6 +155,7 @@ text = "Follow the recipe!"
 label_settings = ExtResource("10_3noq0")
 
 [node name="CountdownLabel" type="Label" parent="Tutorial"]
+layout_mode = 0
 offset_left = 924.0
 offset_top = 126.0
 offset_right = 1606.0
