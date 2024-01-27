@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemType" load_steps=4 format=3 uid="uid://bfv6uyljs0isy"]
+
+[ext_resource type="Script" path="res://item_type.gd" id="1_5uv8o"]
+[ext_resource type="PackedScene" uid="uid://cml5xxbtb785r" path="res://recipes/cheese_melted.tscn" id="1_gt02o"]
+[ext_resource type="Texture2D" uid="uid://dpml5nt2r0bwo" path="res://assets/items/cheese_fall.png" id="1_p1dk6"]
+
+[resource]
+script = ExtResource("1_5uv8o")
+icon = ExtResource("1_p1dk6")
+color = Color(0.729412, 0.635294, 0.243137, 1)
+stacked_scene = ExtResource("1_gt02o")
+name = "Cheese"
+scale_factor = 1.0

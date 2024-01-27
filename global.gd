@@ -5,7 +5,7 @@ extends Node
 @export var top_bun : ItemType
 @export var recipes : Array[Recipe]
 
-var current_recipe = 2
+@export var current_recipe = 0
 
 func get_recipe():
 	return recipes[current_recipe]

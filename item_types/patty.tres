@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemType" load_steps=3 format=3 uid="uid://0natumgqnctk"]
+
+[ext_resource type="Texture2D" uid="uid://eel68wq72pa2" path="res://assets/items/pickle.png" id="1_alqh6"]
+[ext_resource type="Script" path="res://item_type.gd" id="1_hb2if"]
+
+[resource]
+script = ExtResource("1_hb2if")
+icon = ExtResource("1_alqh6")
+color = Color(0.380392, 0.180392, 0.109804, 1)
+name = "Patty"
+scale_factor = 1.0

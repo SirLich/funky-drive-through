@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemType" load_steps=3 format=3 uid="uid://xd01ccv1itdl"]
+
+[ext_resource type="Texture2D" uid="uid://b43rl2jmsk7mx" path="res://assets/items/eggplant.png" id="1_fc3gr"]
+[ext_resource type="Script" path="res://item_type.gd" id="1_wb88x"]
+
+[resource]
+script = ExtResource("1_wb88x")
+icon = ExtResource("1_fc3gr")
+color = Color(1, 1, 1, 1)
+name = "Eggplant"
+scale_factor = 1.0

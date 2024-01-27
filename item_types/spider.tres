@@ -8,8 +8,8 @@
 [resource]
 script = ExtResource("1_gy12i")
 icon = ExtResource("2_2rkvw")
-color = Color(0.888013, 0.500029, 0.98622, 1)
+color = Color(0.513726, 0.494118, 0.74902, 1)
 dropped_scene = ExtResource("1_46ay0")
 stacked_scene = ExtResource("4_ery2c")
-name = ""
+name = "Spider"
 scale_factor = 1.0

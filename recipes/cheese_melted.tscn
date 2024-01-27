@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cml5xxbtb785r"]
 
-[ext_resource type="Texture2D" path="res://assets/items/cheese_melted2.png" id="1_l3uvo"]
-[ext_resource type="Texture2D" path="res://assets/items/cheese_melted.png" id="2_qktv0"]
-[ext_resource type="Texture2D" path="res://assets/items/cheese_drip.png" id="3_f6bnp"]
+[ext_resource type="Texture2D" uid="uid://dci545wqdgepm" path="res://assets/items/cheese_melted2.png" id="1_l3uvo"]
+[ext_resource type="Texture2D" uid="uid://dbwg6wep7unqi" path="res://assets/items/cheese_melted.png" id="2_qktv0"]
+[ext_resource type="Texture2D" uid="uid://bsbgc8tnmmmrf" path="res://assets/items/cheese_drip.png" id="3_f6bnp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cffhs"]
 animations = [{

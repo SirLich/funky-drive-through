@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bgacmnld10nyd"]
+[gd_scene load_steps=17 format=3 uid="uid://bgacmnld10nyd"]
 
 [ext_resource type="Script" path="res://global.gd" id="1_c0auo"]
 [ext_resource type="Resource" uid="uid://y3g8isvibqsa" path="res://item_types/can.tres" id="2_we04m"]
@@ -12,11 +12,14 @@
 [ext_resource type="Resource" uid="uid://bn1qfv8vxs8xt" path="res://recipes/spider_burger.tres" id="8_0bbo8"]
 [ext_resource type="Resource" uid="uid://doaxlys0o21tb" path="res://item_types/steak.tres" id="8_b2npl"]
 [ext_resource type="Resource" uid="uid://ur8o6aoa0roc" path="res://item_types/unicorn.tres" id="9_vyp0d"]
+[ext_resource type="Resource" uid="uid://bfv6uyljs0isy" path="res://item_types/cheese.tres" id="10_h4wci"]
+[ext_resource type="Resource" uid="uid://xd01ccv1itdl" path="res://item_types/eggplant.tres" id="11_vhbeb"]
 [ext_resource type="Resource" uid="uid://uojon2jy1wdp" path="res://recipes/red_meat.tres" id="12_d412x"]
+[ext_resource type="Resource" uid="uid://q6fa3t2063uj" path="res://item_types/tomato.tres" id="12_v74pt"]
 
 [node name="Global" type="Node"]
 process_mode = 3
 script = ExtResource("1_c0auo")
-all_items = Array[Resource("res://item_type.gd")]([ExtResource("2_we04m"), ExtResource("3_elvlt"), ExtResource("4_tm8b5"), ExtResource("5_q43gs"), ExtResource("6_tbn2y"), ExtResource("7_5b7bf"), ExtResource("8_b2npl"), ExtResource("9_vyp0d")])
+all_items = Array[Resource("res://item_type.gd")]([ExtResource("2_we04m"), ExtResource("3_elvlt"), ExtResource("4_tm8b5"), ExtResource("5_q43gs"), ExtResource("6_tbn2y"), ExtResource("7_5b7bf"), ExtResource("8_b2npl"), ExtResource("9_vyp0d"), ExtResource("10_h4wci"), ExtResource("11_vhbeb"), ExtResource("12_v74pt")])
 top_bun = ExtResource("5_drngt")
 recipes = Array[Resource("res://recipe.gd")]([ExtResource("6_3outg"), ExtResource("8_0bbo8"), ExtResource("12_d412x")])
