@@ -6,3 +6,4 @@ class_name Recipe
 @export var allowed_mistakes : int
 @export var good_chance = 0.5
 @export var bun_chance = 0.2
+@export var character : PackedScene

@@ -7,6 +7,7 @@ extends Node2D
 @onready var countdown_label: Label = $CenterContainer/CountdownLabel
 @onready var center_container: CenterContainer = $CenterContainer
 @onready var finish_screen: Control = $HUD/FinishScreen
+@onready var spawn_position: Marker2D = $SpawnPosition
 
 @export var win_scene : PackedScene
 
@@ -119,6 +120,9 @@ func start_dropping():
 func prepare_for_recipe(recipe : Recipe):
 	self.recipe = recipe
 	hud.prepare_for_recipe(recipe)
+	
+	var new_character = recipe.character.instantiate()
+	spawn_position.add_child(new_character)
 	
 	# Just setup recipe stuff
 	food_counts.clear()

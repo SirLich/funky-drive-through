@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemType" load_steps=4 format=3 uid="uid://bg4ossqiixqge"]
+
+[ext_resource type="Texture2D" uid="uid://de76a4ueiyh2q" path="res://assets/items/bone1.png" id="1_7vku1"]
+[ext_resource type="Script" path="res://item_type.gd" id="1_lql7m"]
+[ext_resource type="PackedScene" uid="uid://cej1oc8b6osu3" path="res://scenes/item/bone_scene.tscn" id="1_uqt56"]
+
+[resource]
+script = ExtResource("1_lql7m")
+icon = ExtResource("1_7vku1")
+color = Color(0.733333, 0.643137, 0.541176, 1)
+dropped_scene = ExtResource("1_uqt56")
+stacked_scene = ExtResource("1_uqt56")
+name = "Bone"
+scale_factor = 1.0
