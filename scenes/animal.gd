@@ -1,5 +1,5 @@
 extends Node2D
-class_name Bird
+class_name Animal
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 

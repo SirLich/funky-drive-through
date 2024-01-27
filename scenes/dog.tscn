@@ -1,21 +1,126 @@
-[gd_scene load_steps=28 format=3 uid="uid://bwckprmdmmhxv"]
+[gd_scene load_steps=23 format=3 uid="uid://bqyyp7bw0sr86"]
 
-[ext_resource type="Texture2D" uid="uid://bpedayw2v72jn" path="res://assets/characters/bird/face_back_angry.png" id="1_2xlyu"]
-[ext_resource type="Script" path="res://scenes/animal.gd" id="1_p54rs"]
-[ext_resource type="Texture2D" uid="uid://c4n1w1gvbes8" path="res://assets/characters/bird/face_back_happy.png" id="2_jc5oe"]
-[ext_resource type="Texture2D" uid="uid://dlah1mi3eps8t" path="res://assets/characters/bird/neck_angry.png" id="2_vm2qa"]
-[ext_resource type="Texture2D" uid="uid://db028hgx0qo5h" path="res://assets/characters/bird/face_back_neutral.png" id="3_7vw2x"]
-[ext_resource type="Texture2D" uid="uid://cqhcfrfmhrgtr" path="res://assets/characters/bird/face_front_angry.png" id="3_unfcp"]
-[ext_resource type="Texture2D" uid="uid://cjcky81ug0pgt" path="res://assets/characters/bird/beak_angry.png" id="4_v4hie"]
-[ext_resource type="Texture2D" uid="uid://bmb0pqsrtvm8l" path="res://assets/characters/bird/face_front_happy.png" id="5_7gcxa"]
-[ext_resource type="Texture2D" uid="uid://buu2ikkln76so" path="res://assets/characters/bird/eyebrows_angry.png" id="5_yd3tp"]
-[ext_resource type="Texture2D" uid="uid://8re8xql27c08" path="res://assets/characters/bird/tongue.png" id="6_1f3w0"]
-[ext_resource type="Texture2D" uid="uid://2ruyis5ag2wv" path="res://assets/characters/bird/face_front_neutral.png" id="6_hn3iu"]
-[ext_resource type="Texture2D" uid="uid://bb4n0hhu1wpwf" path="res://assets/characters/bird/neck_happy.png" id="8_nmqqr"]
-[ext_resource type="Texture2D" uid="uid://bg5mssdgvxa6a" path="res://assets/characters/bird/neck_neutral.png" id="9_ld7n2"]
-[ext_resource type="Texture2D" uid="uid://btu7xk1qa4hhc" path="res://assets/characters/bird/beak_happy.png" id="11_aw7s2"]
-[ext_resource type="Texture2D" uid="uid://ceeggdivsrn8n" path="res://assets/characters/bird/beak_neutral.png" id="12_clirs"]
-[ext_resource type="Texture2D" uid="uid://mdsvi7ibxlp2" path="res://assets/characters/bird/none.png" id="16_3lchg"]
+[ext_resource type="Script" path="res://scenes/animal.gd" id="1_0v3wu"]
+[ext_resource type="Texture2D" uid="uid://cjxuc6ntk5a1a" path="res://assets/characters/dog/face_front_angry.png" id="2_ecmoi"]
+[ext_resource type="Texture2D" uid="uid://binc0k0gnyxqu" path="res://assets/characters/dog/neck_angry.png" id="2_eoygl"]
+[ext_resource type="Texture2D" uid="uid://buijaalktip80" path="res://assets/characters/dog/face_front_happy.png" id="3_04xo1"]
+[ext_resource type="Texture2D" uid="uid://dp27467jvt2ui" path="res://assets/characters/dog/neck_happy.png" id="3_qlv8o"]
+[ext_resource type="Texture2D" uid="uid://b8b80soaoikmr" path="res://assets/characters/dog/face_front_neutral.png" id="4_mo1sf"]
+[ext_resource type="Texture2D" uid="uid://byww68g61c6ak" path="res://assets/characters/dog/neck_neutral.png" id="4_xs18g"]
+[ext_resource type="Texture2D" uid="uid://de23pnpdycueg" path="res://assets/characters/dog/face_back_angry.png" id="5_nkxog"]
+[ext_resource type="Texture2D" uid="uid://c47roa25n408p" path="res://assets/characters/dog/face_back_happy.png" id="6_atrwf"]
+[ext_resource type="Texture2D" uid="uid://cfilsb81esnu7" path="res://assets/characters/dog/face_back_neutral.png" id="7_yowxg"]
+[ext_resource type="Texture2D" uid="uid://benloyq0wckvc" path="res://assets/characters/dog/nose_angry.png" id="11_r4pkf"]
+[ext_resource type="Texture2D" uid="uid://bb5q6q76xwxhn" path="res://assets/characters/dog/nose_happy.png" id="12_2py2e"]
+[ext_resource type="Texture2D" uid="uid://bte2evlm1g4bo" path="res://assets/characters/dog/nose_neutral.png" id="13_ma180"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5mjcq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_eoygl")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qlv8o")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_xs18g")
+}],
+"loop": true,
+"name": &"neutral",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e0o3w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_nkxog")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_atrwf")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_yowxg")
+}],
+"loop": true,
+"name": &"neutral",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hy7km"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ecmoi")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_04xo1")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mo1sf")
+}],
+"loop": true,
+"name": &"neutral",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dfrba"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_r4pkf")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_2py2e")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_ma180")
+}],
+"loop": true,
+"name": &"nautral",
+"speed": 5.0
+}]
 
 [sub_resource type="Animation" id="Animation_u6k1x"]
 resource_name = "angry"
@@ -391,197 +496,30 @@ _data = {
 "neutral": SubResource("Animation_sw2o8")
 }
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_whi28"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_vm2qa")
-}],
-"loop": true,
-"name": &"angry",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_nmqqr")
-}],
-"loop": true,
-"name": &"happy",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("9_ld7n2")
-}],
-"loop": true,
-"name": &"neutral",
-"speed": 5.0
-}]
+[node name="Dog" type="Node2D"]
+script = ExtResource("1_0v3wu")
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_c36ac"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_2xlyu")
-}],
-"loop": true,
-"name": &"angry",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_jc5oe")
-}],
-"loop": true,
-"name": &"happy",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_7vw2x")
-}],
-"loop": true,
-"name": &"neutral",
-"speed": 5.0
-}]
+[node name="Neck" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5mjcq")
+animation = &"angry"
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_ffr6h"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_unfcp")
-}],
-"loop": true,
-"name": &"angry",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_7gcxa")
-}],
-"loop": true,
-"name": &"happy",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_hn3iu")
-}],
-"loop": true,
-"name": &"neutral",
-"speed": 5.0
-}]
+[node name="FaceGroup" type="Node2D" parent="."]
+rotation = -0.153589
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_yt1xl"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_v4hie")
-}],
-"loop": true,
-"name": &"angry",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("11_aw7s2")
-}],
-"loop": true,
-"name": &"happy",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("12_clirs")
-}],
-"loop": true,
-"name": &"neutral",
-"speed": 5.0
-}]
+[node name="FaceBack" type="AnimatedSprite2D" parent="FaceGroup"]
+sprite_frames = SubResource("SpriteFrames_e0o3w")
+animation = &"neutral"
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_cv56q"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_1f3w0")
-}],
-"loop": true,
-"name": &"angry",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("16_3lchg")
-}],
-"loop": true,
-"name": &"neutral",
-"speed": 5.0
-}]
+[node name="FaceFront" type="AnimatedSprite2D" parent="FaceGroup"]
+sprite_frames = SubResource("SpriteFrames_hy7km")
+animation = &"angry"
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_vc3eg"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_yd3tp")
-}],
-"loop": true,
-"name": &"angry",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("16_3lchg")
-}],
-"loop": true,
-"name": &"neutral",
-"speed": 5.0
-}]
-
-[node name="Bird" type="Node2D"]
-process_mode = 3
-scale = Vector2(0.365, 0.365)
-script = ExtResource("1_p54rs")
-metadata/_edit_group_ = true
+[node name="Beak" type="AnimatedSprite2D" parent="FaceGroup"]
+sprite_frames = SubResource("SpriteFrames_dfrba")
+animation = &"neutral"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_igwcl")
 }
 speed_scale = 0.6
-
-[node name="Neck" type="AnimatedSprite2D" parent="."]
-modulate = Color(0.835294, 0.866667, 0.878431, 1)
-scale = Vector2(1, 1)
-sprite_frames = SubResource("SpriteFrames_whi28")
-animation = &"angry"
-
-[node name="FaceGroup" type="Node2D" parent="."]
-rotation = -0.153589
-scale = Vector2(1, 1)
-
-[node name="FaceBack" type="AnimatedSprite2D" parent="FaceGroup"]
-sprite_frames = SubResource("SpriteFrames_c36ac")
-animation = &"neutral"
-
-[node name="FaceFront" type="AnimatedSprite2D" parent="FaceGroup"]
-modulate = Color(0.776471, 0.776471, 0.776471, 1)
-sprite_frames = SubResource("SpriteFrames_ffr6h")
-animation = &"angry"
-
-[node name="Beak" type="AnimatedSprite2D" parent="FaceGroup"]
-modulate = Color(0.65098, 0.470588, 0.227451, 1)
-sprite_frames = SubResource("SpriteFrames_yt1xl")
-animation = &"neutral"
-
-[node name="Tongue" type="AnimatedSprite2D" parent="FaceGroup"]
-modulate = Color(0.772549, 0, 0.262745, 1)
-sprite_frames = SubResource("SpriteFrames_cv56q")
-animation = &"neutral"
-
-[node name="Accents" type="AnimatedSprite2D" parent="."]
-modulate = Color(0.843137, 0, 0.168627, 1)
-position = Vector2(5.47945, 0)
-rotation = 0.0802851
-sprite_frames = SubResource("SpriteFrames_vc3eg")
-animation = &"angry"
-speed_scale = 2.0
