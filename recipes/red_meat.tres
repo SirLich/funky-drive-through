@@ -24,3 +24,4 @@ allowed_mistakes = 3
 good_chance = 0.8
 bun_chance = 0.3
 character = ExtResource("1_n4drr")
+gravity = 500
