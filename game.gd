@@ -4,7 +4,10 @@ extends Node2D
 @onready var recipe_label: Label = $HUD/RecipeLabel
 @onready var dropper: Dropper = $Dropper
 @onready var hud: Control = $HUD
+@onready var countdown_label: Label = $CenterContainer/CountdownLabel
+@onready var center_container: CenterContainer = $CenterContainer
 
+@export var end_scene : PackedScene
 @export var item_box_ui : PackedScene
 
 var is_tutorial = true
@@ -30,8 +33,8 @@ func is_food_good(check_type : ItemType):
 func on_item_collected(item : ItemType):
 	if item == Global.top_bun:
 		Global.bun_collected.emit()
-		await get_tree().create_timer(0.1).timeout
-		get_tree().paused = true
+		await get_tree().create_timer(0.15).timeout
+		get_tree().change_scene_to_packed(end_scene)
 	else:
 		if is_food_good(item):
 			Global.good_item_collected.emit(item, food_counts[item])
@@ -43,10 +46,12 @@ func _ready() -> void:
 	prepare_for_recipe(Global.get_recipe())
 	Global.item_collected.connect(on_item_collected)
 	
+func start_dropping():
+	dropper.prepare_for_recipe(recipe)
+	
 func prepare_for_recipe(recipe : Recipe):
 	self.recipe = recipe
 	hud.prepare_for_recipe(recipe)
-	dropper.prepare_for_recipe(recipe)
 	
 	# Just setup recipe stuff
 	food_counts.clear()
@@ -54,5 +59,15 @@ func prepare_for_recipe(recipe : Recipe):
 	for item in Global.all_items:
 		food_counts[item] = 0
 	food_counts[Global.top_bun] = 0
+	
+	for i in range(3,0,-1):
+		countdown_label.text = str(i)
+		center_container.scale = Vector2(1,1)
+		await get_tree().create_tween().tween_property(center_container, "scale", Vector2(0,0), 0.5).finished
+	
+	countdown_label.text = "GO!"
+	center_container.scale = Vector2(1,1)
+	await get_tree().create_tween().tween_property(center_container, "scale", Vector2(0,0), 0.5).finished
 		
+	start_dropping()
 	

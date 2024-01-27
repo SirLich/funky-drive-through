@@ -12,7 +12,10 @@ var bad_items : Array[ItemType]
 @export var bun_chance = 0.1
 @export var good_chance = 0.3
 
+var recipe
+
 func prepare_for_recipe(recipe: Recipe):
+	self.recipe = recipe
 	good_items.clear()
 	bad_items.clear()
 	
@@ -51,6 +54,7 @@ func drop_item():
 	new_drop.global_position.x = self.global_position.x + randi_range(0, max_width)
 	
 func _on_timer_timeout() -> void:
-	randomize_drop_time()
-	drop_item()
+	if recipe:
+		randomize_drop_time()
+		drop_item()
 
