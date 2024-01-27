@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://du5eoiqtbpdd4" path="res://item_types/bread_top.tres" id="5_drngt"]
 
 [node name="Global" type="Node"]
+process_mode = 3
 script = ExtResource("1_c0auo")
 all_items = Array[Resource("res://item_type.gd")]([ExtResource("2_we04m"), ExtResource("3_elvlt"), ExtResource("4_tm8b5")])
 top_bun = ExtResource("5_drngt")

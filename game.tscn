@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dcfett6ns4vqq"]
+[gd_scene load_steps=14 format=3 uid="uid://dcfett6ns4vqq"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_6brd1"]
 [ext_resource type="Resource" uid="uid://c0li33aqx7fvj" path="res://recipes/bug_burger.tres" id="2_jxd6d"]
@@ -9,6 +9,8 @@
 [ext_resource type="Script" path="res://dropper.gd" id="6_ebwai"]
 [ext_resource type="PackedScene" uid="uid://blv1sdwd4eyiq" path="res://scenes/item_box_ui.tscn" id="7_5rb7w"]
 [ext_resource type="Script" path="res://hud.gd" id="9_k1kde"]
+[ext_resource type="LabelSettings" uid="uid://by2l3bawx6flr" path="res://item_types/tutorial_label.tres" id="10_3noq0"]
+[ext_resource type="Script" path="res://tutorial.gd" id="10_vqbed"]
 
 [sub_resource type="Environment" id="Environment_1begj"]
 
@@ -95,5 +97,31 @@ theme_override_constants/separation = 50
 
 [node name="ItemBoxUI" parent="HUD/Items" instance=ExtResource("7_5rb7w")]
 layout_mode = 2
+
+[node name="Tutorial" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("10_vqbed")
+
+[node name="Label" type="Label" parent="Tutorial"]
+layout_mode = 0
+offset_left = 997.0
+offset_top = 897.0
+offset_right = 1472.0
+offset_bottom = 939.0
+text = "Use Mouse to Collect Ingredients"
+label_settings = ExtResource("10_3noq0")
+
+[node name="Label2" type="Label" parent="Tutorial"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 405.0
+offset_right = 512.0
+offset_bottom = 447.0
+text = "Follow the recipe!"
+label_settings = ExtResource("10_3noq0")
 
 [connection signal="timeout" from="Dropper/Timer" to="Dropper" method="_on_timer_timeout"]

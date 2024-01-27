@@ -8,11 +8,14 @@ extends Node2D
 @export var item_box_ui : PackedScene
 @export var default_recipe : Recipe
 
+var is_tutorial = true
 
 # Current recipe
 var recipe : Recipe
 var food_counts = {}
 
+@onready var tutorial: Control = $Tutorial
+		
 func is_food_good(check_type : ItemType):
 	for item in recipe.ingredients:
 		if item.type == check_type:
@@ -25,10 +28,13 @@ func is_food_good(check_type : ItemType):
 	return false
 	
 func on_item_collected(item : ItemType):
-	if is_food_good(item):
-		Global.good_item_collected.emit(item, food_counts[item])
+	if item == Global.top_bun:
+		Global.bun_collected.emit()
 	else:
-		Global.bad_item_collected.emit(item, food_counts[item])
+		if is_food_good(item):
+			Global.good_item_collected.emit(item, food_counts[item])
+		else:
+			Global.bad_item_collected.emit(item, food_counts[item])
 
 func _ready() -> void:
 	prepare_for_recipe(default_recipe)

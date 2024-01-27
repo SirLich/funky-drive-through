@@ -6,7 +6,5 @@ extends Control
 func _ready() -> void:
 	bird.become_neutral()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_texture_button_button_up() -> void:
+	get_tree().change_scene_to_file("res://game.tscn")
