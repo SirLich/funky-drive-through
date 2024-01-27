@@ -9,6 +9,9 @@ class_name Dropper
 var good_items : Array[ItemType]
 var bad_items : Array[ItemType]
 
+@export var bun_chance = 0.1
+@export var good_chance = 0.3
+
 func prepare_for_recipe(recipe: Recipe):
 	good_items.clear()
 	bad_items.clear()
@@ -31,11 +34,13 @@ func randomize_drop_time():
 	$Timer.wait_time = randf_range(drop_time_min, drop_time_max)
 
 func get_random_item():
-	# TODO: Add a bias here so we can decide how many good items vs bad items
-	if randf() > 0.5:
+	if randf() < bun_chance:
+		return Global.top_bun
+		
+	if randf() < good_chance:
 		return good_items.pick_random()
-	else:
-		return bad_items.pick_random()
+
+	return bad_items.pick_random()
 	
 func drop_item():
 	var item = get_random_item()

@@ -2,7 +2,7 @@ extends Node
 
 # TODO: This could be generated...
 @export var all_items : Array[ItemType]
-
+@export var top_bun : ItemType
 signal item_collected(item : ItemType)
 signal bad_item_collected(item : ItemType, count : int)
 signal good_item_collected(item : ItemType, count : int)

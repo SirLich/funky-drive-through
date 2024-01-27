@@ -43,5 +43,6 @@ func prepare_for_recipe(recipe : Recipe):
 	food_counts.clear()
 	for item in Global.all_items:
 		food_counts[item] = 0
+	food_counts[Global.top_bun] = 0
 		
 	

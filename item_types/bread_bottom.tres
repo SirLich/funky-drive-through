@@ -8,4 +8,4 @@ script = ExtResource("1_x0los")
 icon = ExtResource("1_0io87")
 color = Color(0.85098, 0.541176, 0.321569, 1)
 name = "Bread Bottom"
-scale_factor = 2.0
+scale_factor = 1.5
