@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bvrws0mbm0nxi"]
+
+[ext_resource type="FontFile" uid="uid://bo5l36wxnmqos" path="res://assets/fonts/rich_eating.otf" id="1_1xase"]
+
+[resource]
+default_font = ExtResource("1_1xase")

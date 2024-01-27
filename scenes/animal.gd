@@ -24,12 +24,9 @@ func become_happy():
 	animation_player.animation_finished.connect(on_animation_finished, CONNECT_ONE_SHOT)
 	
 func on_animation_finished(anim_name):
-	if end_screen:
-		if happy:
-			become_happy()
-		else:
-			become_angry()
-	become_neutral()
+	if not end_screen:
+		become_neutral()
+	
 
 func on_good_item_collected(item_type, count):
 	become_happy()
