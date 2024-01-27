@@ -17,6 +17,10 @@ func _ready() -> void:
 func prepare_for_recipe(recipe_item : RecipeItem):
 	item = recipe_item
 	set_count(0)
+	
+	# TODO: Consider scene support here!
 	texture_rect.texture = item.type.icon
+	texture_rect.modulate = item.type.color
+	texture_rect.scale *= item.type.scale_factor
 	name_label.text = item.type.name
 

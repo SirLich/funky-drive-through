@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d1nn1ff7rwlbn"]
 
 [ext_resource type="Script" path="res://scenes/item/dropped_item.gd" id="1_fsgcd"]
-[ext_resource type="PackedScene" uid="uid://dbjv7s462ldbm" path="res://generic_dropped_scene.tscn" id="2_p4xra"]
+[ext_resource type="PackedScene" uid="uid://dbjv7s462ldbm" path="res://generic_item.tscn" id="2_0d135"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bmt1c"]
 radius = 22.0
@@ -10,7 +10,7 @@ height = 126.0
 [node name="DroppedItem" type="RigidBody2D"]
 collision_layer = 2
 script = ExtResource("1_fsgcd")
-generic_dropped_scene = ExtResource("2_p4xra")
+generic_dropped_scene = ExtResource("2_0d135")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708

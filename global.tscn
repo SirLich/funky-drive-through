@@ -1,9 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bgacmnld10nyd"]
+[gd_scene load_steps=5 format=3 uid="uid://bgacmnld10nyd"]
 
 [ext_resource type="Script" path="res://global.gd" id="1_c0auo"]
 [ext_resource type="Resource" uid="uid://y3g8isvibqsa" path="res://item_types/can.tres" id="2_we04m"]
 [ext_resource type="Resource" uid="uid://l2kx6vi2yus8" path="res://item_types/worm.tres" id="3_elvlt"]
+[ext_resource type="Resource" uid="uid://bpdphbdmki6ua" path="res://item_types/pickle.tres" id="4_tm8b5"]
 
 [node name="Global" type="Node"]
 script = ExtResource("1_c0auo")
-all_items = Array[Resource("res://item_type.gd")]([ExtResource("2_we04m"), ExtResource("3_elvlt")])
+all_items = Array[Resource("res://item_type.gd")]([ExtResource("2_we04m"), ExtResource("3_elvlt"), ExtResource("4_tm8b5")])

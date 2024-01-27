@@ -7,6 +7,6 @@
 [resource]
 script = ExtResource("2_pty54")
 icon = ExtResource("1_afy2u")
-color = Color(1, 0.627451, 0.588235, 1)
+color = Color(1, 0.392157, 0.360784, 1)
 dropped_scene = ExtResource("1_rrd0l")
 name = "Worm"

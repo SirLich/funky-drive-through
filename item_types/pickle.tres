@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemType" load_steps=3 format=3 uid="uid://bpdphbdmki6ua"]
+
+[ext_resource type="Script" path="res://item_type.gd" id="1_f576w"]
+[ext_resource type="Texture2D" uid="uid://eel68wq72pa2" path="res://assets/items/pickle.png" id="1_y8rq0"]
+
+[resource]
+script = ExtResource("1_f576w")
+icon = ExtResource("1_y8rq0")
+color = Color(0.321569, 0.717647, 0.254902, 1)
+name = "Pickle"
