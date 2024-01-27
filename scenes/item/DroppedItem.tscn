@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://d1nn1ff7rwlbn"]
 
-[ext_resource type="Script" path="res://scenes/item/item.gd" id="1_ddpcj"]
+[ext_resource type="Script" path="res://scenes/item/dropped_item.gd" id="1_fsgcd"]
 [ext_resource type="Texture2D" uid="uid://bv1iqqog0x8rs" path="res://assets/items/worm_fall.png" id="2_nxxnv"]
 [ext_resource type="Texture2D" uid="uid://bmx21jgmesvb" path="res://assets/items/eye_closed.png" id="3_3crc3"]
 [ext_resource type="Texture2D" uid="uid://ddh8r7f7bwrv1" path="res://assets/items/eye_open.png" id="4_240qg"]
@@ -25,7 +25,7 @@ animations = [{
 
 [node name="Item" type="RigidBody2D"]
 collision_layer = 2
-script = ExtResource("1_ddpcj")
+script = ExtResource("1_fsgcd")
 
 [node name="Item" type="Node2D" parent="."]
 
@@ -43,4 +43,4 @@ texture = ExtResource("2_nxxnv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprites"]
 sprite_frames = SubResource("SpriteFrames_egfno")
 autoplay = "default"
-frame_progress = 0.829732
+frame_progress = 0.994475

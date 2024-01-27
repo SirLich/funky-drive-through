@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var items: HBoxContainer = $HUD/Items
 @onready var recipe_label: Label = $HUD/RecipeLabel
+@onready var dropper: Dropper = $Dropper
 
 @export var item_box_ui : PackedScene
 @export var default_recipe : Recipe
@@ -20,6 +21,6 @@ func prepare_for_recipe(recipe : Recipe):
 		items.add_child(new_item)
 		new_item.prepare_for_recipe(ingredient)
 		
-	# TODO: Dropper!
+	dropper.prepare_for_recipe(recipe)
 		
 	
