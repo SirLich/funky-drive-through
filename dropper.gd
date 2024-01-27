@@ -34,6 +34,9 @@ func randomize_drop_time():
 	$Timer.wait_time = randf_range(drop_time_min, drop_time_max)
 
 func get_random_item():
+	if Global.is_pending_finish and randf() < 0.5:
+		return Global.top_bun
+	
 	if randf() < recipe.bun_chance:
 		return Global.top_bun
 		

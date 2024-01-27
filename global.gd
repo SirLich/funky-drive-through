@@ -7,6 +7,8 @@ extends Node
 
 @export var current_recipe = 0
 
+var is_pending_finish = false
+
 func get_recipe():
 	return recipes[current_recipe]
 

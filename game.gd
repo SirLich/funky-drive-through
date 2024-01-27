@@ -70,7 +70,7 @@ func mistakes_pass():
 func end_round():
 	get_tree().call_group('dropped_item', 'queue_free')
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	
+	Global.is_pending_finish = false
 	finish_screen.visible = true
 	Global.reached_end_screen.emit(did_win())
 	if did_win():
@@ -113,6 +113,8 @@ func on_item_collected(item : ItemType):
 		else:
 			bad_count += 1
 			Global.bad_item_collected.emit(item, bad_count)
+	if goals_pass():
+		Global.is_pending_finish = true
 
 func _ready() -> void:
 	finish_screen.visible = false
