@@ -14,114 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://bb5q6q76xwxhn" path="res://assets/characters/dog/nose_happy.png" id="12_2py2e"]
 [ext_resource type="Texture2D" uid="uid://bte2evlm1g4bo" path="res://assets/characters/dog/nose_neutral.png" id="13_ma180"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_5mjcq"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_eoygl")
-}],
-"loop": true,
-"name": &"angry",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_qlv8o")
-}],
-"loop": true,
-"name": &"happy",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_xs18g")
-}],
-"loop": true,
-"name": &"neutral",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_e0o3w"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_nkxog")
-}],
-"loop": true,
-"name": &"angry",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_atrwf")
-}],
-"loop": true,
-"name": &"happy",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_yowxg")
-}],
-"loop": true,
-"name": &"neutral",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_hy7km"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_ecmoi")
-}],
-"loop": true,
-"name": &"angry",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_04xo1")
-}],
-"loop": true,
-"name": &"happy",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_mo1sf")
-}],
-"loop": true,
-"name": &"neutral",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_dfrba"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("11_r4pkf")
-}],
-"loop": true,
-"name": &"angry",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("12_2py2e")
-}],
-"loop": true,
-"name": &"happy",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("13_ma180")
-}],
-"loop": true,
-"name": &"nautral",
-"speed": 5.0
-}]
-
 [sub_resource type="Animation" id="Animation_u6k1x"]
 resource_name = "angry"
 length = 0.5
@@ -133,10 +25,10 @@ tracks/0/path = NodePath("FaceGroup/FaceBack:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [&"angry", &"neutral", &"angry", &"angry"]
+"values": [&"angry", &"neutral", &"angry"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -157,7 +49,7 @@ tracks/2/path = NodePath("FaceGroup/FaceFront:animation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
+"times": PackedFloat32Array(0, 0.05, 0.1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [&"angry", &"neutral", &"angry"]
@@ -169,58 +61,22 @@ tracks/3/path = NodePath("FaceGroup/Beak:animation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [&"neutral", &"angry", &"neutral", &"angry", &"neutral", &"angry"]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Accents:animation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.1),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"angry"]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Accents:scale")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FaceGroup:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(2, 2), Vector2(1, 1), Vector2(2, 2), Vector2(1, 1)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("FaceGroup/Tongue:animation")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [&"neutral", &"angry", &"neutral", &"angry", &"neutral", &"angry"]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("FaceGroup:rotation")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.15),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [-0.153589, 0.305433, -0.153589, 0.0]
+"values": [-0.153589, 0.305433, -0.153589, 0.0, -0.153589, 0.0, -0.153589, 0.0]
 }
 
 [sub_resource type="Animation" id="Animation_f75js"]
@@ -288,34 +144,22 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Accents:scale")
+tracks/5/path = NodePath("FaceGroup/Tongue:animation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
+"update": 1,
+"values": [&"neutral"]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("FaceGroup/Tongue:animation")
+tracks/6/path = NodePath("FaceGroup:rotation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"neutral"]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("FaceGroup:rotation")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -496,8 +340,123 @@ _data = {
 "neutral": SubResource("Animation_sw2o8")
 }
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_5mjcq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_eoygl")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qlv8o")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_xs18g")
+}],
+"loop": true,
+"name": &"neutral",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e0o3w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_nkxog")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_atrwf")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_yowxg")
+}],
+"loop": true,
+"name": &"neutral",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hy7km"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ecmoi")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_04xo1")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mo1sf")
+}],
+"loop": true,
+"name": &"neutral",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dfrba"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_r4pkf")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_2py2e")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_ma180")
+}],
+"loop": true,
+"name": &"nautral",
+"speed": 5.0
+}]
+
 [node name="Dog" type="Node2D"]
+modulate = Color(0.72549, 0.478431, 0.313726, 1)
 script = ExtResource("1_0v3wu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_igwcl")
+}
+speed_scale = 0.6
 
 [node name="Neck" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5mjcq")
@@ -507,6 +466,7 @@ animation = &"angry"
 rotation = -0.153589
 
 [node name="FaceBack" type="AnimatedSprite2D" parent="FaceGroup"]
+modulate = Color(0.560784, 0.380392, 0.984314, 1)
 sprite_frames = SubResource("SpriteFrames_e0o3w")
 animation = &"neutral"
 
@@ -515,11 +475,6 @@ sprite_frames = SubResource("SpriteFrames_hy7km")
 animation = &"angry"
 
 [node name="Beak" type="AnimatedSprite2D" parent="FaceGroup"]
+modulate = Color(0.603922, 0.164706, 0.670588, 1)
 sprite_frames = SubResource("SpriteFrames_dfrba")
 animation = &"neutral"
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_igwcl")
-}
-speed_scale = 0.6
