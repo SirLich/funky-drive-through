@@ -99,7 +99,7 @@ environment = SubResource("Environment_1begj")
 
 [node name="SpawnPosition" type="Marker2D" parent="."]
 position = Vector2(392, 789)
-scale = Vector2(0.365, 0.365)
+scale = Vector2(0.29, 0.29)
 
 [node name="Dropper" type="Node2D" parent="."]
 position = Vector2(827, -417)
