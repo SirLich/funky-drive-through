@@ -10,6 +10,8 @@ radius = 40.4969
 
 [node name="Catcher" type="Node2D" node_paths=PackedStringArray("base", "top")]
 script = ExtResource("1_jd7dh")
+border_left = 890
+border_right = 1610
 stacked_item = ExtResource("2_b1twt")
 base = NodePath("Base")
 top = NodePath("Top")

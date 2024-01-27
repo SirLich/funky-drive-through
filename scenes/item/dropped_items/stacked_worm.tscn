@@ -40,9 +40,9 @@ scale = Vector2(0.1, 0.1)
 modulate = Color(0.882353, 0.545098, 0.67451, 1)
 sprite_frames = SubResource("SpriteFrames_2bh2y")
 autoplay = "default"
-frame_progress = 0.272736
+frame_progress = 0.948052
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_egfno")
 autoplay = "default"
-frame_progress = 0.653086
+frame_progress = 0.294004

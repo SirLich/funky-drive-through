@@ -69,6 +69,7 @@ func mistakes_pass():
 	
 func end_round():
 	get_tree().call_group('dropped_item', 'queue_free')
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 	finish_screen.visible = true
 	Global.reached_end_screen.emit(did_win())
@@ -123,6 +124,7 @@ func start_dropping():
 	
 func prepare_for_recipe(recipe : Recipe):
 	self.recipe = recipe
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	hud.prepare_for_recipe(recipe)
 	
 	var new_character = recipe.character.instantiate()
