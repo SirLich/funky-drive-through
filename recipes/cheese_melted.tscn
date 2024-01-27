@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cml5xxbtb785r"]
+
+[ext_resource type="Texture2D" path="res://assets/items/cheese_melted2.png" id="1_l3uvo"]
+[ext_resource type="Texture2D" path="res://assets/items/cheese_melted.png" id="2_qktv0"]
+[ext_resource type="Texture2D" path="res://assets/items/cheese_drip.png" id="3_f6bnp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cffhs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_l3uvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qktv0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+modulate = Color(0.729412, 0.635294, 0.243137, 1)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_cffhs")
+autoplay = "default"
+frame_progress = 0.11635
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_f6bnp")

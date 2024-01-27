@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cq8wt8l7f2fqd"]
+
+[ext_resource type="Texture2D" uid="uid://bevp3afnfqpts" path="res://assets/items/steak2.png" id="1_yq17v"]
+[ext_resource type="Texture2D" uid="uid://djn213lsvl32u" path="res://assets/items/steak_flat.png" id="2_2ur8v"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hoh1l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yq17v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2ur8v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Anim" type="AnimatedSprite2D"]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_hoh1l")
+autoplay = "default"
+frame_progress = 0.55782

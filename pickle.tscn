@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://mxhu7jjk62bu"]
+
+[ext_resource type="Texture2D" uid="uid://jwwq2kayelxn" path="res://assets/items/pickle2.png" id="1_nonsg"]
+[ext_resource type="Texture2D" uid="uid://eel68wq72pa2" path="res://assets/items/pickle.png" id="2_3r7au"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jyajt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nonsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3r7au")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="SteakDrop" type="AnimatedSprite2D"]
+modulate = Color(0.415686, 0.682353, 0.294118, 1)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_jyajt")
+autoplay = "default"

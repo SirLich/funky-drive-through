@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://bw1pv1u7i1iyd"]
+
+[ext_resource type="Texture2D" uid="uid://f1yq0xsddn21" path="res://assets/items/worm_flat2.png" id="1_q8n8y"]
+[ext_resource type="Texture2D" uid="uid://bmx21jgmesvb" path="res://assets/items/eye_closed.png" id="2_5ruon"]
+[ext_resource type="Texture2D" uid="uid://i82kogf6jms2" path="res://assets/items/worm_flat.png" id="2_j52ld"]
+[ext_resource type="Texture2D" uid="uid://ddh8r7f7bwrv1" path="res://assets/items/eye_open.png" id="3_m5ino"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2bh2y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_q8n8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_j52ld")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_egfno"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5ruon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m5ino")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="Sprites" type="Node2D"]
+scale = Vector2(0.1, 0.1)
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.882353, 0.545098, 0.67451, 1)
+sprite_frames = SubResource("SpriteFrames_2bh2y")
+autoplay = "default"
+frame_progress = 0.272736
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_egfno")
+autoplay = "default"
+frame_progress = 0.653086
