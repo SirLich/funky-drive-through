@@ -20,4 +20,4 @@ texture = ExtResource("1_4hlkv")
 sprite_frames = ExtResource("3_hargu")
 animation = &"blink"
 autoplay = "blink"
-frame_progress = 0.646736
+frame_progress = 0.254055

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bgacmnld10nyd"]
+[gd_scene load_steps=10 format=3 uid="uid://bgacmnld10nyd"]
 
 [ext_resource type="Script" path="res://global.gd" id="1_c0auo"]
 [ext_resource type="Resource" uid="uid://y3g8isvibqsa" path="res://item_types/can.tres" id="2_we04m"]
@@ -7,10 +7,12 @@
 [ext_resource type="Resource" uid="uid://du5eoiqtbpdd4" path="res://item_types/bread_top.tres" id="5_drngt"]
 [ext_resource type="Resource" uid="uid://gpvcw7cmcvjt" path="res://item_types/shoe.tres" id="5_q43gs"]
 [ext_resource type="Resource" uid="uid://c0li33aqx7fvj" path="res://recipes/bug_burger.tres" id="6_3outg"]
+[ext_resource type="Resource" uid="uid://bktwpessi4585" path="res://item_types/spider.tres" id="6_tbn2y"]
+[ext_resource type="Resource" uid="uid://bn1qfv8vxs8xt" path="res://recipes/spider_burger.tres" id="8_0bbo8"]
 
 [node name="Global" type="Node"]
 process_mode = 3
 script = ExtResource("1_c0auo")
-all_items = Array[Resource("res://item_type.gd")]([ExtResource("2_we04m"), ExtResource("3_elvlt"), ExtResource("4_tm8b5"), ExtResource("5_q43gs")])
+all_items = Array[Resource("res://item_type.gd")]([ExtResource("2_we04m"), ExtResource("3_elvlt"), ExtResource("4_tm8b5"), ExtResource("5_q43gs"), ExtResource("6_tbn2y")])
 top_bun = ExtResource("5_drngt")
-recipes = Array[Resource("res://recipe.gd")]([ExtResource("6_3outg")])
+recipes = Array[Resource("res://recipe.gd")]([ExtResource("6_3outg"), ExtResource("8_0bbo8")])

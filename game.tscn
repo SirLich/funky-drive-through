@@ -1,7 +1,8 @@
-[gd_scene load_steps=27 format=3 uid="uid://dcfett6ns4vqq"]
+[gd_scene load_steps=28 format=3 uid="uid://dcfett6ns4vqq"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_6brd1"]
 [ext_resource type="PackedScene" uid="uid://baau16ndim5ve" path="res://end_screen.tscn" id="2_fthv7"]
+[ext_resource type="PackedScene" uid="uid://dcw8fifnxbkli" path="res://item_types/win.tscn" id="2_xbt8u"]
 [ext_resource type="PackedScene" uid="uid://bde5jwauuhx81" path="res://scenes/item/catcher.tscn" id="4_2i66j"]
 [ext_resource type="Texture2D" uid="uid://b4te54epp1n14" path="res://assets/background.png" id="4_e5ape"]
 [ext_resource type="PackedScene" uid="uid://d1nn1ff7rwlbn" path="res://scenes/item/dropped_item.tscn" id="5_1bqwg"]
@@ -63,6 +64,7 @@ size = Vector2(2366, 412.5)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_6brd1")
+win_scene = ExtResource("2_xbt8u")
 end_scene = ExtResource("2_fthv7")
 item_box_ui = ExtResource("7_5rb7w")
 

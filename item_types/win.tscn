@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcw8fifnxbkli"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yav2o"]
+font_size = 400
+
+[node name="Win" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1989.0
+offset_bottom = 1130.0
+color = Color(0.752941, 0.490196, 0.592157, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 264.0
+offset_right = 1966.0
+offset_bottom = 1103.0
+text = "YOU WON"
+label_settings = SubResource("LabelSettings_yav2o")

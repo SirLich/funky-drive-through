@@ -8,6 +8,8 @@ extends Node2D
 @onready var center_container: CenterContainer = $CenterContainer
 @onready var finish_screen: Control = $HUD/FinishScreen
 
+@export var win_scene : PackedScene
+
 @onready var success_text: Label = $HUD/FinishScreen/ColorRect/VBoxContainer/SuccessText
 @onready var goal_label: Label = $HUD/FinishScreen/ColorRect/VBoxContainer/GoalRow/GoalLabel
 @onready var mistakes_label: Label = $HUD/FinishScreen/ColorRect/VBoxContainer/MistakesRow/MistakesLabel
@@ -140,6 +142,10 @@ func prepare_for_recipe(recipe : Recipe):
 func _on_finish_button_pressed() -> void:
 	if did_win():
 		Global.current_recipe += 1
-		get_tree().change_scene_to_file("res://game.tscn")
+		
+		if Global.current_recipe > Global.recipes.size():
+			get_tree().change_scene_to_packed(win_scene)
+		else:
+			get_tree().change_scene_to_file("res://game.tscn")
 	else:
 		get_tree().change_scene_to_file("res://game.tscn")

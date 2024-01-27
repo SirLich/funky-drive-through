@@ -7,10 +7,12 @@
 [sub_resource type="Resource" id="Resource_at3lp"]
 script = ExtResource("1_yly5r")
 type = ExtResource("2_jj3dl")
-num = 5
+num = 3
 
 [resource]
 script = ExtResource("1_eivae")
 name = "Bug Burger"
 ingredients = Array[ExtResource("1_yly5r")]([SubResource("Resource_at3lp")])
-allowed_mistakes = 4
+allowed_mistakes = 5
+good_chance = 0.5
+bun_chance = 0.2
