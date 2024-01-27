@@ -10,6 +10,8 @@ var item : RecipeItem
 func set_count(n):
 	score_label.text = str(n) + "/" + str(item.num)
 
+func _ready() -> void:
+	pass
 	
 func prepare_for_recipe(recipe_item : RecipeItem):
 	item = recipe_item

@@ -17,7 +17,9 @@ func prepare_for_recipe(recipe : Recipe):
 		
 	for ingredient in recipe.ingredients:
 		var new_item = item_box_ui.instantiate()
-		new_item.prepare_for_recipe(ingredient)
 		items.add_child(new_item)
+		new_item.prepare_for_recipe(ingredient)
+		
+	# TODO: Dropper!
 		
 	
