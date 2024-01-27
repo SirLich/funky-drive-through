@@ -70,7 +70,7 @@ func end_round():
 	finish_screen.visible = true
 	Global.reached_end_screen.emit(did_win())
 	if did_win():
-
+		
 		finish_button_text.text = "Next"
 		success_text.text = "Success!"
 	else:
