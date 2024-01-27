@@ -13,6 +13,15 @@ extends Node2D
 @onready var mistakes_label: Label = $HUD/FinishScreen/ColorRect/VBoxContainer/MistakesRow/MistakesLabel
 
 
+@onready var goal_image_fail: TextureRect = $HUD/FinishScreen/ColorRect/VBoxContainer/GoalRow/GoalImageFail
+@onready var goal_image_ok: TextureRect = $HUD/FinishScreen/ColorRect/VBoxContainer/GoalRow/GoalImageOK
+@onready var mistakes_image_fail: TextureRect = $HUD/FinishScreen/ColorRect/VBoxContainer/MistakesRow/MistakesImageFail
+@onready var mistakes_image_ok: TextureRect = $HUD/FinishScreen/ColorRect/VBoxContainer/MistakesRow/MistakesImageOK
+
+@onready var finish_button_text: Label = $HUD/FinishScreen/ColorRect/FinishButton/FinishButtonText
+
+
+
 @export var end_scene : PackedScene
 @export var item_box_ui : PackedScene
 
@@ -30,6 +39,7 @@ func calculate_good_goal():
 	var total = 0
 	for item in recipe.ingredients:
 		total += item.num
+	return total
 	
 func is_food_good(check_type : ItemType):
 	for item in recipe.ingredients:
@@ -43,19 +53,42 @@ func is_food_good(check_type : ItemType):
 	return false
 
 func did_win():
-	return true
+	return goals_pass() and mistakes_pass()
+	
+func goals_pass():
+	return good_count == calculate_good_goal()
+
+func mistakes_pass():
+	return bad_count <= recipe.allowed_mistakes
 	
 func end_round():
 	get_tree().call_group('dropped_item', 'queue_free')
 	
 	finish_screen.visible = true
 	if did_win():
+		finish_button_text.text = "Next"
 		success_text.text = "Success!"
 	else:
+		finish_button_text.text = "Restart"
 		success_text.text = "Failure!"
 	
 	goal_label.text = "Goals: " + str(good_count) + "/" + str(calculate_good_goal())
 	mistakes_label.text = "Mistakes: " + str(bad_count) + "/" + str(recipe.allowed_mistakes)
+	
+	if goals_pass():
+		goal_image_fail.visible = false
+		goal_image_ok.visible = true
+	else:
+		goal_image_fail.visible = true
+		goal_image_ok.visible = false
+	
+	if mistakes_pass():
+		mistakes_image_fail.visible = false
+		mistakes_image_ok.visible = true
+	else:
+		mistakes_image_fail.visible = true
+		mistakes_image_ok.visible = false
+		
 	get_tree().paused = true
 	
 func on_item_collected(item : ItemType):
@@ -102,3 +135,11 @@ func prepare_for_recipe(recipe : Recipe):
 		
 	start_dropping()
 	
+
+
+func _on_finish_button_pressed() -> void:
+	if did_win():
+		Global.current_recipe += 1
+		get_tree().change_scene_to_file("res://game.tscn")
+	else:
+		get_tree().change_scene_to_file("res://game.tscn")

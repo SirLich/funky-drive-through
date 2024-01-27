@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dcfett6ns4vqq"]
+[gd_scene load_steps=27 format=3 uid="uid://dcfett6ns4vqq"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_6brd1"]
 [ext_resource type="PackedScene" uid="uid://baau16ndim5ve" path="res://end_screen.tscn" id="2_fthv7"]
@@ -28,15 +28,35 @@ font_size = 35
 font_size = 60
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dlwcq"]
+bg_color = Color(0.403922, 0.266667, 0.286275, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
 [sub_resource type="LabelSettings" id="LabelSettings_f44vb"]
-font_size = 200
+font_size = 100
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0b81q"]
 atlas = ExtResource("11_18tpj")
 region = Rect2(25.9796, 27.5487, 586.886, 539.81)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_tglfl"]
+atlas = ExtResource("11_18tpj")
+region = Rect2(750.957, 27.5487, 659.07, 586.886)
+
 [sub_resource type="LabelSettings" id="LabelSettings_akisb"]
 font_size = 40
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5d3lm"]
+atlas = ExtResource("7_1n7r7")
+region = Rect2(1230.78, 128.59, 801.272, 463.295)
+
+[sub_resource type="LabelSettings" id="LabelSettings_40qpg"]
+font_size = 50
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wf6ld"]
 size = Vector2(2366, 412.5)
@@ -94,6 +114,7 @@ offset_bottom = 391.0
 metadata/_edit_group_ = true
 
 [node name="ItemBox" type="TextureRect" parent="HUD/Mistakes"]
+self_modulate = Color(0.678431, 0.337255, 0.317647, 1)
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 texture = SubResource("AtlasTexture_2rdmc")
@@ -126,22 +147,25 @@ theme_override_constants/separation = 50
 layout_mode = 2
 
 [node name="FinishScreen" type="Control" parent="HUD"]
+process_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ColorRect" type="ColorRect" parent="HUD/FinishScreen"]
+[node name="ColorRect" type="Panel" parent="HUD/FinishScreen"]
 layout_mode = 0
-offset_left = 816.0
-offset_top = 58.0
-offset_right = 1678.0
-offset_bottom = 564.0
-color = Color(0.729412, 0.411765, 0.478431, 1)
+offset_left = 819.0
+offset_top = 84.0
+offset_right = 1673.0
+offset_bottom = 576.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dlwcq")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HUD/FinishScreen/ColorRect"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -3.0
+offset_top = 1.0
+offset_right = 482.0
+offset_bottom = 482.0
 
 [node name="SuccessText" type="Label" parent="HUD/FinishScreen/ColorRect/VBoxContainer"]
 layout_mode = 2
@@ -149,17 +173,23 @@ size_flags_horizontal = 4
 text = "Fail
 "
 label_settings = SubResource("LabelSettings_f44vb")
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="GoalRow" type="HBoxContainer" parent="HUD/FinishScreen/ColorRect/VBoxContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="HUD/FinishScreen/ColorRect/VBoxContainer/GoalRow"]
+[node name="GoalImageFail" type="TextureRect" parent="HUD/FinishScreen/ColorRect/VBoxContainer/GoalRow"]
 modulate = Color(0.823529, 0, 0.168627, 1)
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 texture = SubResource("AtlasTexture_0b81q")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="GoalImageOK" type="TextureRect" parent="HUD/FinishScreen/ColorRect/VBoxContainer/GoalRow"]
+modulate = Color(0.329412, 0.580392, 0, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = SubResource("AtlasTexture_tglfl")
 expand_mode = 1
 stretch_mode = 5
 
@@ -171,7 +201,7 @@ label_settings = SubResource("LabelSettings_akisb")
 [node name="MistakesRow" type="HBoxContainer" parent="HUD/FinishScreen/ColorRect/VBoxContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="HUD/FinishScreen/ColorRect/VBoxContainer/MistakesRow"]
+[node name="MistakesImageFail" type="TextureRect" parent="HUD/FinishScreen/ColorRect/VBoxContainer/MistakesRow"]
 modulate = Color(0.823529, 0, 0.168627, 1)
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
@@ -179,10 +209,41 @@ texture = SubResource("AtlasTexture_0b81q")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="MistakesImageOK" type="TextureRect" parent="HUD/FinishScreen/ColorRect/VBoxContainer/MistakesRow"]
+modulate = Color(0.329412, 0.580392, 0, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = SubResource("AtlasTexture_tglfl")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="MistakesLabel" type="Label" parent="HUD/FinishScreen/ColorRect/VBoxContainer/MistakesRow"]
 layout_mode = 2
 text = "Mistakes: 0/10"
 label_settings = SubResource("LabelSettings_akisb")
+
+[node name="FinishButton" type="TextureButton" parent="HUD/FinishScreen/ColorRect"]
+modulate = Color(0.533333, 0.643137, 0.862745, 1)
+layout_mode = 0
+offset_left = 289.0
+offset_top = 329.0
+offset_right = 563.0
+offset_bottom = 488.0
+texture_normal = SubResource("AtlasTexture_5d3lm")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_group_ = true
+
+[node name="FinishButtonText" type="Label" parent="HUD/FinishScreen/ColorRect/FinishButton"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 37.0
+offset_right = 220.0
+offset_bottom = 133.0
+text = "PLAY"
+label_settings = SubResource("LabelSettings_40qpg")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 offset_left = 937.0
@@ -247,4 +308,5 @@ position = Vector2(1057, 1498)
 shape = SubResource("RectangleShape2D_wf6ld")
 
 [connection signal="timeout" from="Dropper/Timer" to="Dropper" method="_on_timer_timeout"]
+[connection signal="pressed" from="HUD/FinishScreen/ColorRect/FinishButton" to="." method="_on_finish_button_pressed"]
 [connection signal="body_entered" from="KillZone" to="KillZone" method="_on_body_entered"]

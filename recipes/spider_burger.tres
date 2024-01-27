@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=2 format=3 uid="uid://bn1qfv8vxs8xt"]
+
+[ext_resource type="Script" path="res://recipe.gd" id="1_h7rt7"]
+
+[resource]
+script = ExtResource("1_h7rt7")
+name = "Spider Burger"
+ingredients = Array[Resource("res://recipe_item.gd")]([])
+allowed_mistakes = 0

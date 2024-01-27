@@ -10,6 +10,7 @@ region = Rect2(1230.78, 128.59, 801.272, 463.295)
 
 [sub_resource type="LabelSettings" id="LabelSettings_stnm7"]
 font_size = 70
+font_color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -32,6 +33,7 @@ color = Color(0.576471, 0.780392, 0.976471, 1)
 position = Vector2(381, 722)
 
 [node name="TextureButton" type="TextureButton" parent="."]
+modulate = Color(0.321569, 0.713726, 0.729412, 1)
 layout_mode = 0
 offset_left = 1186.0
 offset_top = 81.0

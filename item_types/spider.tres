@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemType" load_steps=5 format=3 uid="uid://bktwpessi4585"]
+
+[ext_resource type="PackedScene" uid="uid://c1x4bttcr25xj" path="res://scenes/item/dropped_items/dropped_spider.tscn" id="1_46ay0"]
+[ext_resource type="Script" path="res://item_type.gd" id="1_gy12i"]
+[ext_resource type="Texture2D" uid="uid://dwfmrj7ny4aso" path="res://assets/items/spider/body_base.png" id="1_r70hb"]
+[ext_resource type="PackedScene" uid="uid://dk7wbtajl150f" path="res://scenes/item/dropped_items/stacked_spider.tscn" id="4_ery2c"]
+
+[resource]
+script = ExtResource("1_gy12i")
+icon = ExtResource("1_r70hb")
+color = Color(1, 1, 1, 1)
+dropped_scene = ExtResource("1_46ay0")
+stacked_scene = ExtResource("4_ery2c")
+name = ""
+scale_factor = 1.0

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1x4bttcr25xj"]
+
+[ext_resource type="Texture2D" uid="uid://dwfmrj7ny4aso" path="res://assets/items/spider/body_base.png" id="1_4hlkv"]
+[ext_resource type="Texture2D" uid="uid://b8mq0jyawqsy4" path="res://assets/items/spider/leg_falling.png" id="2_x63uv"]
+[ext_resource type="SpriteFrames" uid="uid://clse082nbl5u2" path="res://assets/items/spider/spider_blink_frames.tres" id="3_hargu"]
+
+[node name="Sprites" type="Node2D"]
+scale = Vector2(0.1, 0.1)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+scale = Vector2(1, 1)
+texture = ExtResource("2_x63uv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.513726, 0.494118, 0.74902, 1)
+scale = Vector2(1, 1)
+texture = ExtResource("1_4hlkv")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("3_hargu")
+animation = &"blink"
+autoplay = "blink"
+frame_progress = 0.646736

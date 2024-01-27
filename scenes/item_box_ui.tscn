@@ -25,6 +25,7 @@ label_settings = SubResource("LabelSettings_3d7ub")
 horizontal_alignment = 1
 
 [node name="ItemBox" type="TextureRect" parent="."]
+self_modulate = Color(0.654902, 0.572549, 0.494118, 1)
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 texture = SubResource("AtlasTexture_onpjt")
