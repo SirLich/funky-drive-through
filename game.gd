@@ -153,7 +153,7 @@ func _on_finish_button_pressed() -> void:
 	if did_win():
 		Global.current_recipe += 1
 		
-		if Global.current_recipe > Global.recipes.size():
+		if Global.current_recipe >= Global.recipes.size():
 			get_tree().change_scene_to_packed(win_scene)
 		else:
 			get_tree().change_scene_to_file("res://game.tscn")

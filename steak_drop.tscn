@@ -18,6 +18,7 @@ animations = [{
 }]
 
 [node name="SteakDrop" type="AnimatedSprite2D"]
+scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_f1pon")
 autoplay = "default"
 frame_progress = 0.112634

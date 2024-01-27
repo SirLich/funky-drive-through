@@ -2,11 +2,14 @@ extends Node2D
 class_name Animal
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var happy_sound: AudioStreamPlayer = $HappySound
+@onready var angry_sound: AudioStreamPlayer = $AngrySound
 
 var end_screen = false
 var happy = false
 
 func become_angry():
+	angry_sound.play()
 	animation_player.play("neutral")
 	animation_player.play("angry")
 	animation_player.animation_finished.connect(on_animation_finished, CONNECT_ONE_SHOT)
@@ -15,6 +18,7 @@ func become_neutral():
 	animation_player.play("neutral")
 
 func become_happy():
+	happy_sound.play()
 	animation_player.play("neutral")
 	animation_player.play("happy")
 	animation_player.animation_finished.connect(on_animation_finished, CONNECT_ONE_SHOT)

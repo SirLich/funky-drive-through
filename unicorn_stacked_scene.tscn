@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://5fi3lw3pawjg"]
+
+[ext_resource type="Texture2D" uid="uid://bigmf1s2lrrko" path="res://assets/items/unicorn_flat2.png" id="1_bhobg"]
+[ext_resource type="Texture2D" uid="uid://b5va7scfkm0ol" path="res://assets/items/unicorn_flat.png" id="2_nths4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xpay8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bhobg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_nths4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_xpay8")
+autoplay = "default"
+frame_progress = 0.981883
