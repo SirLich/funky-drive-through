@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bde5jwauuhx81"]
 
 [ext_resource type="Script" path="res://scenes/item/catcher.gd" id="1_jd7dh"]
-[ext_resource type="Texture2D" uid="uid://0phwuakw03kd" path="res://assets/temp/genericItem_color_116.png" id="1_yrgt3"]
 [ext_resource type="PackedScene" uid="uid://cwo33wdcofuqm" path="res://scenes/item/stacked_item.tscn" id="2_b1twt"]
+[ext_resource type="Resource" uid="uid://y3g8isvibqsa" path="res://item_types/can.tres" id="3_ewid0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v15wv"]
 radius = 40.4969
@@ -12,6 +12,7 @@ script = ExtResource("1_jd7dh")
 stacked_item = ExtResource("2_b1twt")
 base = NodePath("Base")
 top = NodePath("Top")
+starting_item = ExtResource("3_ewid0")
 
 [node name="Top" type="Area2D" parent="."]
 collision_mask = 2
@@ -20,10 +21,5 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_v15wv")
 
 [node name="Base" type="Node2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="Base"]
-position = Vector2(27, -3)
-rotation = 1.03479
-texture = ExtResource("1_yrgt3")
 
 [connection signal="body_entered" from="Top" to="." method="_on_area_2d_body_entered"]

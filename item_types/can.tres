@@ -6,4 +6,5 @@
 [resource]
 script = ExtResource("1_ws6in")
 icon = ExtResource("1_1e6kt")
+color = Color(1, 1, 1, 1)
 name = "Tin Can"
