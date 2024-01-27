@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://baau16ndim5ve"]
 
 [ext_resource type="Texture2D" uid="uid://cnd1kj7020uls" path="res://assets/frame.png" id="1_bkd0v"]
-[ext_resource type="Script" path="res://item_types/end_screen.gd" id="1_g65ld"]
+[ext_resource type="Script" path="res://end_screen.gd" id="1_g65ld"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vl60s"]
 font_size = 100
@@ -42,6 +42,7 @@ text = "YOU CREATED"
 label_settings = SubResource("LabelSettings_vl60s")
 
 [node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 655.0
 offset_top = 656.0
 offset_right = 1258.0

@@ -13,3 +13,4 @@ num = 5
 script = ExtResource("1_eivae")
 name = "Bug Burger"
 ingredients = Array[ExtResource("1_yly5r")]([SubResource("Resource_r5ip8")])
+allowed_mistakes = 5

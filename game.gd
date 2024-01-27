@@ -33,7 +33,7 @@ func is_food_good(check_type : ItemType):
 func end_round():
 	get_tree().call_group('dropped_item', 'queue_free')
 	
-	
+	$HUD/FinishScreen.visible = true
 	get_tree().paused = true
 	
 func on_item_collected(item : ItemType):

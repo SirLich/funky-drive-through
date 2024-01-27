@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://dcfett6ns4vqq"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_6brd1"]
-[ext_resource type="PackedScene" uid="uid://baau16ndim5ve" path="res://end_screen.tscn" id="2_fthv7"]
+[ext_resource type="PackedScene" uid="uid://baau16ndim5ve" path="res://item_types/end_screen.tscn" id="2_fthv7"]
 [ext_resource type="PackedScene" uid="uid://bde5jwauuhx81" path="res://scenes/item/catcher.tscn" id="4_2i66j"]
 [ext_resource type="Texture2D" uid="uid://b4te54epp1n14" path="res://assets/background.png" id="4_e5ape"]
 [ext_resource type="PackedScene" uid="uid://d1nn1ff7rwlbn" path="res://scenes/item/dropped_item.tscn" id="5_1bqwg"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cnd1kj7020uls" path="res://assets/frame.png" id="7_1n7r7"]
 [ext_resource type="PackedScene" uid="uid://blv1sdwd4eyiq" path="res://scenes/item_box_ui.tscn" id="7_5rb7w"]
 [ext_resource type="Script" path="res://hud.gd" id="9_k1kde"]
-[ext_resource type="LabelSettings" uid="uid://by2l3bawx6flr" path="res://tutorial_label.tres" id="10_3noq0"]
+[ext_resource type="LabelSettings" uid="uid://by2l3bawx6flr" path="res://item_types/tutorial_label.tres" id="10_3noq0"]
 [ext_resource type="Script" path="res://tutorial.gd" id="10_vqbed"]
 [ext_resource type="Script" path="res://kill_zone.gd" id="13_e048j"]
 
@@ -132,7 +132,6 @@ offset_bottom = 564.0
 color = Color(0.72549, 0.470588, 0.388235, 1)
 
 [node name="Fail" type="Label" parent="HUD/FinishScreen/ColorRect"]
-layout_mode = 0
 offset_left = -57.0
 offset_top = -142.0
 offset_right = 625.0
@@ -145,7 +144,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Success" type="Label" parent="HUD/FinishScreen/ColorRect"]
-layout_mode = 0
 offset_left = -57.0
 offset_top = -142.0
 offset_right = 625.0

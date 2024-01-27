@@ -2,6 +2,7 @@ extends Control
 
 @onready var recipe_label: Label = $RecipeLabel
 @onready var items: HBoxContainer = $Items
+@onready var mistake_label: Label = $Mistakes/MistakeLabel
 
 @export var item_box_ui : PackedScene
 var recipe
@@ -14,7 +15,7 @@ func get_box_by_type(item : ItemType) -> ItemBoxUI:
 	
 
 func on_bad_item_collected(item: ItemType, count):
-	$Mistakes/MistakeLabel.text = "Wrong: " + str(count)
+	mistake_label.text = str(count) + "/" + str(recipe.allowed_mistakes)
 	
 func on_good_item_collected(item : ItemType, count):
 	var box_child = get_box_by_type(item)
@@ -22,6 +23,7 @@ func on_good_item_collected(item : ItemType, count):
 		box_child.set_count(count)
 	
 func prepare_for_recipe(recipe : Recipe):
+	mistake_label.text =  "0/" + str(recipe.allowed_mistakes)
 	self.recipe = recipe
 	recipe_label.text = recipe.name
 	for c in items.get_children():
