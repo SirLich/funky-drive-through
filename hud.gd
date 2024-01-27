@@ -13,10 +13,10 @@ func get_box_by_type(item : ItemType) -> ItemBoxUI:
 	return null
 	
 	
-func on_item_collected(item : ItemType):
+func on_good_item_collected(item : ItemType, count):
 	var box_child = get_box_by_type(item)
 	if box_child:
-		box_child.set_count(100)
+		box_child.set_count(count)
 	
 func prepare_for_recipe(recipe : Recipe):
 	self.recipe = recipe
@@ -32,8 +32,7 @@ func prepare_for_recipe(recipe : Recipe):
 		
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Global.item_collected.connect(on_item_collected)
-
+	Global.good_item_collected.connect(on_good_item_collected)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

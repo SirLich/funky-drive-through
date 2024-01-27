@@ -10,10 +10,25 @@ extends Node2D
 
 
 # Current recipe
-var recipe
+var recipe : Recipe
+var food_counts = {}
 
+func is_food_good(check_type : ItemType):
+	for item in recipe.ingredients:
+		if item.type == check_type:
+			if food_counts[check_type] < item.num:
+				food_counts[check_type] += 1
+				return true
+			else:
+				# Overfilled!
+				return false
+	return false
+	
 func on_item_collected(item : ItemType):
-	print('test')
+	if is_food_good(item):
+		Global.good_item_collected.emit(item, food_counts[item])
+	else:
+		Global.bad_item_collected.emit(item, food_counts[item])
 
 func _ready() -> void:
 	prepare_for_recipe(default_recipe)
@@ -23,5 +38,10 @@ func prepare_for_recipe(recipe : Recipe):
 	self.recipe = recipe
 	hud.prepare_for_recipe(recipe)
 	dropper.prepare_for_recipe(recipe)
+	
+	# Just setup recipe stuff
+	food_counts.clear()
+	for item in Global.all_items:
+		food_counts[item] = 0
 		
 	

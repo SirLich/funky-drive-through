@@ -17,12 +17,12 @@ func become_happy():
 func on_animation_finished(anim_name):
 	become_neutral()
 
-func on_item_collected(item_type : ItemType):
+func on_bad_item_collected(item_type : ItemType, count: int):
 	become_angry()
 		
 func _ready() -> void:
 	become_neutral()
-	Global.item_collected.connect(on_item_collected)
+	Global.bad_item_collected.connect(on_bad_item_collected)
 
 func _process(delta: float) -> void:
 	pass
