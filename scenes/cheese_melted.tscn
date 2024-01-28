@@ -1,17 +1,17 @@
 [gd_scene load_steps=5 format=3 uid="uid://cml5xxbtb785r"]
 
-[ext_resource type="Texture2D" uid="uid://dci545wqdgepm" path="res://assets/items/cheese_melted2.png" id="1_l3uvo"]
-[ext_resource type="Texture2D" uid="uid://dbwg6wep7unqi" path="res://assets/items/cheese_melted.png" id="2_qktv0"]
-[ext_resource type="Texture2D" uid="uid://bsbgc8tnmmmrf" path="res://assets/items/cheese_drip.png" id="3_f6bnp"]
+[ext_resource type="Texture2D" uid="uid://dci545wqdgepm" path="res://assets/items/cheese_melted2.png" id="1_786hh"]
+[ext_resource type="Texture2D" uid="uid://dbwg6wep7unqi" path="res://assets/items/cheese_melted.png" id="2_xg6db"]
+[ext_resource type="Texture2D" uid="uid://bsbgc8tnmmmrf" path="res://assets/items/cheese_drip.png" id="3_laxke"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cffhs"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_l3uvo")
+"texture": ExtResource("1_786hh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_qktv0")
+"texture": ExtResource("2_xg6db")
 }],
 "loop": true,
 "name": &"default",
@@ -26,4 +26,4 @@ autoplay = "default"
 frame_progress = 0.11635
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("3_f6bnp")
+texture = ExtResource("3_laxke")

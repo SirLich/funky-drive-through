@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ItemType" load_steps=4 format=3 uid="uid://bfv6uyljs0isy"]
 
 [ext_resource type="Script" path="res://item_type.gd" id="1_5uv8o"]
-[ext_resource type="PackedScene" uid="uid://cml5xxbtb785r" path="res://recipes/cheese_melted.tscn" id="1_gt02o"]
+[ext_resource type="PackedScene" uid="uid://cml5xxbtb785r" path="res://scenes/cheese_melted.tscn" id="1_gt02o"]
 [ext_resource type="Texture2D" uid="uid://dpml5nt2r0bwo" path="res://assets/items/cheese_fall.png" id="1_p1dk6"]
 
 [resource]

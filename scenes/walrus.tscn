@@ -1,7 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://dhge2q7r58cps"]
+[gd_scene load_steps=23 format=3 uid="uid://dhge2q7r58cps"]
 
 [ext_resource type="Script" path="res://scenes/animal.gd" id="1_gxndi"]
+[ext_resource type="AudioStream" uid="uid://c528q4k8es2og" path="res://assets/sounds/walrus_good.wav" id="2_pmglk"]
 [ext_resource type="Texture2D" uid="uid://c180gby024nif" path="res://assets/characters/walrus/neck_angry.png" id="2_xwevo"]
+[ext_resource type="AudioStream" uid="uid://bp7j1nddo5mmb" path="res://assets/sounds/walrus_bad.wav" id="3_k0ju0"]
 [ext_resource type="Texture2D" uid="uid://5ag1peivml5w" path="res://assets/characters/walrus/neck_happy.png" id="3_lmqjh"]
 [ext_resource type="Texture2D" uid="uid://dv3s5045hhv5d" path="res://assets/characters/walrus/neck_neutral.png" id="4_hreni"]
 [ext_resource type="Texture2D" uid="uid://ck5icbkhet5l2" path="res://assets/characters/walrus/face_back_angry.png" id="5_s28m5"]
@@ -123,7 +125,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-0.322886]
+"values": [0.0]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -186,7 +188,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.7, 0.8, 0.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [-0.322886, 0.701622, -0.0541052, 0.268781, -0.162316, 0.16057, 0.0]
+"values": [-0.322886, -0.214675, -0.0541052, 0.268781, -0.162316, 0.16057, 0.0]
 }
 
 [sub_resource type="Animation" id="Animation_we27v"]
@@ -259,6 +261,18 @@ _data = {
 "happy": SubResource("Animation_we27v"),
 "neutral": SubResource("Animation_jwwn5")
 }
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_3unuu"]
+random_pitch = 1.2
+streams_count = 1
+stream_0/stream = ExtResource("2_pmglk")
+stream_0/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_c3oo3"]
+random_pitch = 1.2
+streams_count = 1
+stream_0/stream = ExtResource("3_k0ju0")
+stream_0/weight = 1.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8nq4f"]
 animations = [{
@@ -350,8 +364,10 @@ libraries = {
 }
 
 [node name="HappySound" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_3unuu")
 
 [node name="AngrySound" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_c3oo3")
 
 [node name="Neck" type="AnimatedSprite2D" parent="."]
 modulate = Color(0.309804, 0.301961, 0.427451, 1)
@@ -359,7 +375,6 @@ sprite_frames = SubResource("SpriteFrames_8nq4f")
 animation = &"neutral"
 
 [node name="FaceGroup" type="Node2D" parent="."]
-rotation = -0.322886
 
 [node name="FaceBack" type="AnimatedSprite2D" parent="FaceGroup"]
 modulate = Color(0.717647, 0.517647, 0.415686, 1)
