@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://dropper.gd" id="6_ebwai"]
 [ext_resource type="Texture2D" uid="uid://cnd1kj7020uls" path="res://assets/frame.png" id="7_1n7r7"]
 [ext_resource type="PackedScene" uid="uid://blv1sdwd4eyiq" path="res://scenes/item_box_ui.tscn" id="7_5rb7w"]
-[ext_resource type="AudioStream" uid="uid://sk2beuh1p8gd" path="res://assets/sounds/play_scene_1-2.wav" id="7_mte1n"]
+[ext_resource type="AudioStream" uid="uid://dutekcqjlcxcm" path="res://assets/sounds/play_scene_1-2_added_melody.wav" id="7_2037t"]
 [ext_resource type="Script" path="res://hud.gd" id="9_k1kde"]
 [ext_resource type="LabelSettings" uid="uid://by2l3bawx6flr" path="res://tutorial_label.tres" id="10_3noq0"]
 [ext_resource type="Script" path="res://tutorial.gd" id="10_vqbed"]
@@ -168,8 +168,7 @@ stream = ExtResource("5_72ibb")
 stream = ExtResource("5_2yt2d")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="Sounds"]
-stream = ExtResource("7_mte1n")
-volume_db = 20.775
+stream = ExtResource("7_2037t")
 autoplay = true
 
 [node name="Art" type="Node2D" parent="."]

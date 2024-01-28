@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dv2a3sjanlaso" path="res://assets/items/unicorn.png" id="1_1kqw1"]
 [ext_resource type="Script" path="res://item_type.gd" id="1_4kgnj"]
-[ext_resource type="AudioStream" uid="uid://crik25ksilvlm" path="res://assets/audio_resources/impact_low.tres" id="1_bwsst"]
+[ext_resource type="AudioStream" uid="uid://dywumm7wsvjb5" path="res://assets/dropping_food_sound.wav" id="1_gs56d"]
 [ext_resource type="PackedScene" uid="uid://5fi3lw3pawjg" path="res://unicorn_stacked_scene.tscn" id="3_kaowj"]
 
 [resource]
@@ -12,4 +12,4 @@ color = Color(1, 1, 1, 1)
 stacked_scene = ExtResource("3_kaowj")
 name = "Unicorn"
 scale_factor = 1.0
-audio = ExtResource("1_bwsst")
+audio = ExtResource("1_gs56d")

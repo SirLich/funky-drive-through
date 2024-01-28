@@ -15,5 +15,5 @@ func configure_for_item(item : ItemType):
 		new_dropped_scene.texture = item.icon
 		new_dropped_scene.modulate = item.color
 		new_dropped_scene.scale *= item.scale_factor
-		
+	new_dropped_scene.scale = Vector2(-1, 1)
 	add_child(new_dropped_scene)

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://menu.gd" id="1_iq4jb"]
 [ext_resource type="PackedScene" uid="uid://bwckprmdmmhxv" path="res://scenes/bird.tscn" id="1_rf33c"]
 [ext_resource type="Texture2D" uid="uid://cnd1kj7020uls" path="res://assets/frame.png" id="3_lawy5"]
-[ext_resource type="AudioStream" uid="uid://0qqfq4tqgluf" path="res://assets/sounds/background_menu_1-2.wav" id="4_4f0d8"]
+[ext_resource type="AudioStream" uid="uid://dc5jltp41cf8q" path="res://assets/sounds/background_menu_1-2_loop.wav" id="4_3yigo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_muowe"]
 atlas = ExtResource("3_lawy5")
@@ -54,7 +54,7 @@ text = "PLAY"
 label_settings = SubResource("LabelSettings_stnm7")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_4f0d8")
+stream = ExtResource("4_3yigo")
 autoplay = true
 
 [connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]
