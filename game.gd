@@ -71,6 +71,7 @@ func mistakes_pass():
 	return bad_count <= recipe.allowed_mistakes
 	
 func end_round():
+	$HUD/UIAnimation.play("RESET")
 	get_tree().call_group('dropped_item', 'queue_free')
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	Global.is_pending_finish = false
@@ -169,6 +170,8 @@ func _on_finish_button_pressed() -> void:
 		if Global.current_recipe >= Global.recipes.size():
 			get_tree().change_scene_to_file("res://menu.tscn")
 		else:
+			$HUD/UIAnimation.play("begin")
+			Global.current_recipe
 			get_tree().change_scene_to_file("res://game.tscn")
 	else:
 		get_tree().change_scene_to_file("res://game.tscn")

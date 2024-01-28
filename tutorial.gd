@@ -1,6 +1,7 @@
 extends Control
 
 func _ready() -> void:
+	await get_tree().create_timer(0.1).timeout
 	get_tree().paused = true
 	
 func _input(event: InputEvent) -> void:
