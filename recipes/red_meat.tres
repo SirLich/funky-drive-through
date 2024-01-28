@@ -9,19 +9,19 @@
 [sub_resource type="Resource" id="Resource_8rj52"]
 script = ExtResource("2_2j720")
 type = ExtResource("3_dca1a")
-num = 5
+num = 3
 
 [sub_resource type="Resource" id="Resource_xgk5b"]
 script = ExtResource("2_2j720")
 type = ExtResource("4_q88rj")
-num = 1
+num = 2
 
 [resource]
 script = ExtResource("1_bdqhn")
 name = "Red Meat"
 ingredients = Array[ExtResource("2_2j720")]([SubResource("Resource_8rj52"), SubResource("Resource_xgk5b")])
-allowed_mistakes = 3
-good_chance = 0.8
-bun_chance = 0.3
+allowed_mistakes = 4
+good_chance = 0.45
+bun_chance = 0.15
 character = ExtResource("1_n4drr")
-gravity = 500
+gravity = 510

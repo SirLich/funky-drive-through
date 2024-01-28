@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bgacmnld10nyd"]
+[gd_scene load_steps=25 format=3 uid="uid://bgacmnld10nyd"]
 
 [ext_resource type="Script" path="res://global.gd" id="1_c0auo"]
 [ext_resource type="Resource" uid="uid://y3g8isvibqsa" path="res://item_types/can.tres" id="2_we04m"]
@@ -20,10 +20,14 @@
 [ext_resource type="Resource" uid="uid://dnykdn0my3pq" path="res://item_types/fish.tres" id="14_su4it"]
 [ext_resource type="Resource" uid="uid://cm4cxynvvj2bl" path="res://recipes/fish_burger.tres" id="16_k38s8"]
 [ext_resource type="Resource" uid="uid://c10uio2gylx77" path="res://recipes/normal_burger.tres" id="17_h8006"]
+[ext_resource type="Resource" uid="uid://bkrsinfgtpgk6" path="res://recipes/trash_burger.tres" id="21_jkbq6"]
+[ext_resource type="Resource" uid="uid://r5wcv78rfv5w" path="res://recipes/veggie_burger.tres" id="22_nxfsy"]
+[ext_resource type="Resource" uid="uid://cxpnffp2kw3wf" path="res://recipes/toy_burger.tres" id="23_gt8j3"]
+[ext_resource type="Resource" uid="uid://doftu3tl3sjyb" path="res://recipes/wiggly_burger.tres" id="24_00ms5"]
 
 [node name="Global" type="Node"]
 process_mode = 3
 script = ExtResource("1_c0auo")
 all_items = Array[Resource("res://item_type.gd")]([ExtResource("2_we04m"), ExtResource("3_elvlt"), ExtResource("4_tm8b5"), ExtResource("5_q43gs"), ExtResource("6_tbn2y"), ExtResource("7_5b7bf"), ExtResource("8_b2npl"), ExtResource("9_vyp0d"), ExtResource("10_h4wci"), ExtResource("11_vhbeb"), ExtResource("12_v74pt"), ExtResource("13_v5u5r"), ExtResource("14_su4it")])
 top_bun = ExtResource("5_drngt")
-recipes = Array[Resource("res://recipe.gd")]([ExtResource("16_k38s8"), ExtResource("6_3outg"), ExtResource("8_0bbo8"), ExtResource("17_h8006"), ExtResource("12_d412x")])
+recipes = Array[Resource("res://recipe.gd")]([ExtResource("6_3outg"), ExtResource("8_0bbo8"), ExtResource("12_d412x"), ExtResource("17_h8006"), ExtResource("16_k38s8"), ExtResource("21_jkbq6"), ExtResource("22_nxfsy"), ExtResource("23_gt8j3"), ExtResource("24_00ms5")])

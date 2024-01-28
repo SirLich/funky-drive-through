@@ -9,19 +9,19 @@
 [sub_resource type="Resource" id="Resource_bpsij"]
 script = ExtResource("2_15eea")
 type = ExtResource("3_g1wwg")
-num = 8
+num = 5
 
 [sub_resource type="Resource" id="Resource_4efpe"]
 script = ExtResource("2_15eea")
 type = ExtResource("4_8fuwv")
-num = 4
+num = 3
 
 [resource]
 script = ExtResource("1_s7l88")
 name = "Fish and Pickles"
 ingredients = Array[ExtResource("2_15eea")]([SubResource("Resource_bpsij"), SubResource("Resource_4efpe")])
-allowed_mistakes = 1
+allowed_mistakes = 2
 good_chance = 0.6
 bun_chance = 0.3
 character = ExtResource("1_x8okd")
-gravity = 500
+gravity = 600

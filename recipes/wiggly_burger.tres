@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=10 format=3 uid="uid://doftu3tl3sjyb"]
+
+[ext_resource type="PackedScene" uid="uid://dhge2q7r58cps" path="res://scenes/walrus.tscn" id="1_bp8m3"]
+[ext_resource type="Script" path="res://recipe.gd" id="1_tc4q3"]
+[ext_resource type="Script" path="res://recipe_item.gd" id="2_7die1"]
+[ext_resource type="Resource" uid="uid://l2kx6vi2yus8" path="res://item_types/worm.tres" id="3_weqdl"]
+[ext_resource type="Resource" uid="uid://dnykdn0my3pq" path="res://item_types/fish.tres" id="4_817ib"]
+[ext_resource type="Resource" uid="uid://bktwpessi4585" path="res://item_types/spider.tres" id="5_7bvcr"]
+
+[sub_resource type="Resource" id="Resource_jlctb"]
+script = ExtResource("2_7die1")
+type = ExtResource("3_weqdl")
+num = 3
+
+[sub_resource type="Resource" id="Resource_btyo5"]
+script = ExtResource("2_7die1")
+type = ExtResource("4_817ib")
+num = 3
+
+[sub_resource type="Resource" id="Resource_nsdd4"]
+script = ExtResource("2_7die1")
+type = ExtResource("5_7bvcr")
+num = 3
+
+[resource]
+script = ExtResource("1_tc4q3")
+name = "Wiggly Burger"
+ingredients = Array[ExtResource("2_7die1")]([SubResource("Resource_jlctb"), SubResource("Resource_btyo5"), SubResource("Resource_nsdd4")])
+allowed_mistakes = 3
+good_chance = 0.6
+bun_chance = 0.1
+character = ExtResource("1_bp8m3")
+gravity = 700

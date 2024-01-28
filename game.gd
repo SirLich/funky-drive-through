@@ -128,6 +128,7 @@ func start_dropping():
 	dropper.prepare_for_recipe(recipe)
 	
 func prepare_for_recipe(recipe : Recipe):
+	Global.is_pending_finish = false
 	self.recipe = recipe
 	hud.prepare_for_recipe(recipe)
 	

@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=10 format=3 uid="uid://bkrsinfgtpgk6"]
+
+[ext_resource type="Script" path="res://recipe.gd" id="1_3g8ry"]
+[ext_resource type="PackedScene" uid="uid://dhge2q7r58cps" path="res://scenes/walrus.tscn" id="1_7wsw6"]
+[ext_resource type="Script" path="res://recipe_item.gd" id="2_74634"]
+[ext_resource type="Resource" uid="uid://y3g8isvibqsa" path="res://item_types/can.tres" id="3_5ew8a"]
+[ext_resource type="Resource" uid="uid://gpvcw7cmcvjt" path="res://item_types/shoe.tres" id="4_yy1li"]
+[ext_resource type="Resource" uid="uid://ur8o6aoa0roc" path="res://item_types/unicorn.tres" id="5_cwu4v"]
+
+[sub_resource type="Resource" id="Resource_uxfa5"]
+script = ExtResource("2_74634")
+type = ExtResource("3_5ew8a")
+num = 2
+
+[sub_resource type="Resource" id="Resource_e5de7"]
+script = ExtResource("2_74634")
+type = ExtResource("4_yy1li")
+num = 2
+
+[sub_resource type="Resource" id="Resource_03ioe"]
+script = ExtResource("2_74634")
+type = ExtResource("5_cwu4v")
+num = 2
+
+[resource]
+script = ExtResource("1_3g8ry")
+name = "Sparkly Trash"
+ingredients = Array[ExtResource("2_74634")]([SubResource("Resource_uxfa5"), SubResource("Resource_e5de7"), SubResource("Resource_03ioe")])
+allowed_mistakes = 1
+good_chance = 0.45
+bun_chance = 0.1
+character = ExtResource("1_7wsw6")
+gravity = 620
