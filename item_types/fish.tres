@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="ItemType" load_steps=4 format=3 uid="uid://dnykdn0my3pq"]
+[gd_resource type="Resource" script_class="ItemType" load_steps=5 format=3 uid="uid://dnykdn0my3pq"]
 
+[ext_resource type="AudioStream" uid="uid://dost0mxm307gd" path="res://assets/audio_resources/impact_soft.tres" id="1_bvqpf"]
 [ext_resource type="Script" path="res://item_type.gd" id="1_ciqgv"]
 [ext_resource type="PackedScene" uid="uid://xpoxpjmvvq3u" path="res://fish_scene.tscn" id="1_qqob6"]
 [ext_resource type="Texture2D" uid="uid://crx5o05in0wo6" path="res://assets/items/fish.png" id="2_4j3gb"]
@@ -12,3 +13,4 @@ dropped_scene = ExtResource("1_qqob6")
 stacked_scene = ExtResource("1_qqob6")
 name = "Fish"
 scale_factor = 1.0
+audio = ExtResource("1_bvqpf")

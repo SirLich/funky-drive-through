@@ -1,13 +1,15 @@
-[gd_resource type="Resource" script_class="ItemType" load_steps=4 format=3 uid="uid://bfv6uyljs0isy"]
+[gd_resource type="Resource" script_class="ItemType" load_steps=5 format=3 uid="uid://bfv6uyljs0isy"]
 
 [ext_resource type="Script" path="res://item_type.gd" id="1_5uv8o"]
-[ext_resource type="PackedScene" uid="uid://cml5xxbtb785r" path="res://scenes/cheese_melted.tscn" id="1_gt02o"]
 [ext_resource type="Texture2D" uid="uid://dpml5nt2r0bwo" path="res://assets/items/cheese_fall.png" id="1_p1dk6"]
+[ext_resource type="AudioStream" uid="uid://dost0mxm307gd" path="res://assets/audio_resources/impact_soft.tres" id="1_rhpjo"]
+[ext_resource type="PackedScene" uid="uid://cml5xxbtb785r" path="res://scenes/cheese_melted.tscn" id="4_lx4l4"]
 
 [resource]
 script = ExtResource("1_5uv8o")
 icon = ExtResource("1_p1dk6")
 color = Color(0.729412, 0.635294, 0.243137, 1)
-stacked_scene = ExtResource("1_gt02o")
+stacked_scene = ExtResource("4_lx4l4")
 name = "Cheese"
 scale_factor = 1.0
+audio = ExtResource("1_rhpjo")

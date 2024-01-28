@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="ItemType" load_steps=4 format=3 uid="uid://doaxlys0o21tb"]
+[gd_resource type="Resource" script_class="ItemType" load_steps=5 format=3 uid="uid://doaxlys0o21tb"]
 
 [ext_resource type="Script" path="res://item_type.gd" id="1_bvqn7"]
+[ext_resource type="AudioStream" uid="uid://crik25ksilvlm" path="res://assets/audio_resources/impact_low.tres" id="1_fiaik"]
 [ext_resource type="Texture2D" uid="uid://bgbpwdsws1425" path="res://assets/items/steak.png" id="2_oata2"]
 [ext_resource type="PackedScene" uid="uid://cq8wt8l7f2fqd" path="res://steak_stacked.tscn" id="4_x7txs"]
 
@@ -11,3 +12,4 @@ color = Color(1, 1, 1, 1)
 stacked_scene = ExtResource("4_x7txs")
 name = "Steak"
 scale_factor = 1.0
+audio = ExtResource("1_fiaik")

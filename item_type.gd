@@ -7,3 +7,4 @@ class_name ItemType
 @export var stacked_scene : PackedScene
 @export var name : String
 @export var scale_factor = 1.0
+@export var audio : AudioStream

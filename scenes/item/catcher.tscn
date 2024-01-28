@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bde5jwauuhx81"]
+[gd_scene load_steps=7 format=3 uid="uid://bde5jwauuhx81"]
 
 [ext_resource type="Script" path="res://scenes/item/catcher.gd" id="1_jd7dh"]
 [ext_resource type="PackedScene" uid="uid://cwo33wdcofuqm" path="res://scenes/item/stacked_item.tscn" id="2_b1twt"]
+[ext_resource type="AudioStream" uid="uid://dost0mxm307gd" path="res://assets/audio_resources/impact_soft.tres" id="3_34njf"]
 [ext_resource type="Resource" uid="uid://d1yfrpmdvv4ii" path="res://item_types/bread_bottom.tres" id="3_onxk0"]
 [ext_resource type="Texture2D" uid="uid://dn8oa5n26mhqs" path="res://assets/plate.png" id="4_5c14n"]
 
@@ -13,9 +14,12 @@ script = ExtResource("1_jd7dh")
 border_left = 890
 border_right = 1610
 stacked_item = ExtResource("2_b1twt")
+default_stream = ExtResource("3_34njf")
 base = NodePath("Base")
 top = NodePath("Top")
 starting_item = ExtResource("3_onxk0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [node name="Top" type="Area2D" parent="."]
 collision_mask = 2

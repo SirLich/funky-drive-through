@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="ItemType" load_steps=3 format=3 uid="uid://y3g8isvibqsa"]
+[gd_resource type="Resource" script_class="ItemType" load_steps=4 format=3 uid="uid://y3g8isvibqsa"]
 
 [ext_resource type="Texture2D" uid="uid://dseftgsq7eq7c" path="res://assets/items/can.png" id="1_1e6kt"]
+[ext_resource type="AudioStream" uid="uid://bclg3r4r2d5t" path="res://assets/audio_resources/impact_crunch.tres" id="1_73trl"]
 [ext_resource type="Script" path="res://item_type.gd" id="1_ws6in"]
 
 [resource]
@@ -8,3 +9,5 @@ script = ExtResource("1_ws6in")
 icon = ExtResource("1_1e6kt")
 color = Color(1, 1, 1, 1)
 name = "Tin Can"
+scale_factor = 1.0
+audio = ExtResource("1_73trl")
