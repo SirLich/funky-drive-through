@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dbjv7s462ldbm" path="res://generic_item.tscn" id="2_vr7sk"]
 
 [node name="StackedItem" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_q6wav")
 generic_dropped_scene = ExtResource("2_vr7sk")
 
