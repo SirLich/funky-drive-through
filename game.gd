@@ -3,6 +3,9 @@ extends Node2D
 @onready var fail_sound: AudioStreamPlayer = $Sounds/FailSound
 @onready var success_sound: AudioStreamPlayer = $Sounds/SuccessSound
 
+@onready var ui_animation: AnimationPlayer = $HUD/UIAnimation
+
+
 @onready var items: HBoxContainer = $HUD/Items
 @onready var recipe_label: Label = $HUD/RecipeLabel
 @onready var dropper: Dropper = $Dropper
@@ -141,6 +144,11 @@ func prepare_for_recipe(recipe : Recipe):
 	for item in Global.all_items:
 		food_counts[item] = 0
 	food_counts[Global.top_bun] = 0
+	
+	ui_animation.stop(true)
+	ui_animation.play("begin")
+	
+	await ui_animation.animation_finished
 	
 	for i in range(3,0,-1):
 		countdown_label.text = str(i)
