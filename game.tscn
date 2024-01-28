@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dcfett6ns4vqq"]
+[gd_scene load_steps=35 format=3 uid="uid://dcfett6ns4vqq"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_6brd1"]
 [ext_resource type="PackedScene" uid="uid://baau16ndim5ve" path="res://end_screen.tscn" id="2_fthv7"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" path="res://tutorial.gd" id="10_vqbed"]
 [ext_resource type="Texture2D" uid="uid://bnbhditt20lap" path="res://assets/symbols.png" id="11_18tpj"]
 [ext_resource type="Script" path="res://kill_zone.gd" id="13_e048j"]
+[ext_resource type="Texture2D" uid="uid://vlejmxso1xi4" path="res://assets/order_frame.png" id="13_ycflu"]
 [ext_resource type="Texture2D" uid="uid://7uytjmrtwfaq" path="res://assets/frame_result.png" id="14_6ags6"]
 
 [sub_resource type="Environment" id="Environment_1begj"]
@@ -118,7 +119,7 @@ shadow_size = 26
 shadow_color = Color(0, 0, 0, 0.866667)
 
 [sub_resource type="LabelSettings" id="LabelSettings_mrp7q"]
-font_size = 86
+font_size = 76
 font_color = Color(1, 1, 0.360784, 1)
 outline_size = 30
 outline_color = Color(0, 0, 0, 1)
@@ -223,6 +224,15 @@ offset_top = 82.0
 offset_right = 917.0
 offset_bottom = 122.0
 
+[node name="TextureRect" type="TextureRect" parent="HUD/Shift"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = -5.0
+offset_right = 1954.0
+offset_bottom = 818.0
+texture = ExtResource("13_ycflu")
+expand_mode = 1
+
 [node name="Mistakes" type="VBoxContainer" parent="HUD/Shift"]
 layout_mode = 0
 offset_left = 602.0
@@ -257,7 +267,7 @@ horizontal_alignment = 1
 
 [node name="Items" type="HBoxContainer" parent="HUD/Shift"]
 layout_mode = 1
-offset_left = 15.0
+offset_left = 111.0
 offset_top = 103.0
 offset_right = 788.0
 offset_bottom = 357.0
@@ -266,12 +276,18 @@ theme_override_constants/separation = 50
 [node name="ItemBoxUI" parent="HUD/Shift/Items" instance=ExtResource("7_5rb7w")]
 layout_mode = 2
 
+[node name="ItemBoxUI2" parent="HUD/Shift/Items" instance=ExtResource("7_5rb7w")]
+layout_mode = 2
+
+[node name="ItemBoxUI3" parent="HUD/Shift/Items" instance=ExtResource("7_5rb7w")]
+layout_mode = 2
+
 [node name="ClickToBegin" type="Label" parent="HUD/Shift"]
 layout_mode = 0
-offset_left = -13.0
-offset_top = 400.0
-offset_right = 775.0
-offset_bottom = 483.0
+offset_left = 76.0
+offset_top = 397.0
+offset_right = 718.0
+offset_bottom = 488.0
 text = "CLICK TO BEGIN"
 label_settings = SubResource("LabelSettings_mrp7q")
 horizontal_alignment = 1
