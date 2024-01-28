@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bqyyp7bw0sr86"]
+[gd_scene load_steps=29 format=3 uid="uid://bqyyp7bw0sr86"]
 
 [ext_resource type="Script" path="res://scenes/animal.gd" id="1_0v3wu"]
 [ext_resource type="Texture2D" uid="uid://cjxuc6ntk5a1a" path="res://assets/characters/dog/face_front_angry.png" id="2_ecmoi"]
@@ -6,9 +6,11 @@
 [ext_resource type="AudioStream" uid="uid://bnqhel1ekf2o5" path="res://assets/sounds/dog_good.wav" id="2_pomar"]
 [ext_resource type="AudioStream" uid="uid://cronxxjug2sje" path="res://assets/sounds/dog_bad.wav" id="2_rr1v4"]
 [ext_resource type="Texture2D" uid="uid://buijaalktip80" path="res://assets/characters/dog/face_front_happy.png" id="3_04xo1"]
+[ext_resource type="AudioStream" uid="uid://cex3liwxb765a" path="res://assets/sounds/dog_happy_1.wav" id="3_he6jn"]
 [ext_resource type="Texture2D" uid="uid://dp27467jvt2ui" path="res://assets/characters/dog/neck_happy.png" id="3_qlv8o"]
 [ext_resource type="Texture2D" uid="uid://b8b80soaoikmr" path="res://assets/characters/dog/face_front_neutral.png" id="4_mo1sf"]
 [ext_resource type="Texture2D" uid="uid://byww68g61c6ak" path="res://assets/characters/dog/neck_neutral.png" id="4_xs18g"]
+[ext_resource type="AudioStream" uid="uid://droyk2y7n6xjr" path="res://assets/sounds/dog_bad_1.wav" id="5_6dvmd"]
 [ext_resource type="Texture2D" uid="uid://de23pnpdycueg" path="res://assets/characters/dog/face_back_angry.png" id="5_nkxog"]
 [ext_resource type="Texture2D" uid="uid://c47roa25n408p" path="res://assets/characters/dog/face_back_happy.png" id="6_atrwf"]
 [ext_resource type="Texture2D" uid="uid://cfilsb81esnu7" path="res://assets/characters/dog/face_back_neutral.png" id="7_yowxg"]
@@ -18,15 +20,19 @@
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_vsc1p"]
 random_pitch = 1.2
-streams_count = 1
+streams_count = 2
 stream_0/stream = ExtResource("2_pomar")
 stream_0/weight = 1.0
+stream_1/stream = ExtResource("3_he6jn")
+stream_1/weight = 1.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_3hdi5"]
 random_pitch = 1.2
-streams_count = 1
+streams_count = 2
 stream_0/stream = ExtResource("2_rr1v4")
 stream_0/weight = 1.0
+stream_1/stream = ExtResource("5_6dvmd")
+stream_1/weight = 1.0
 
 [sub_resource type="Animation" id="Animation_ey6gc"]
 length = 0.001
