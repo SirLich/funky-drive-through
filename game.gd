@@ -129,7 +129,6 @@ func start_dropping():
 	
 func prepare_for_recipe(recipe : Recipe):
 	self.recipe = recipe
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	hud.prepare_for_recipe(recipe)
 	
 	print(recipe.gravity)
@@ -149,7 +148,6 @@ func prepare_for_recipe(recipe : Recipe):
 	ui_animation.play("begin")
 	
 	await ui_animation.animation_finished
-	
 	for i in range(3,0,-1):
 		countdown_label.text = str(i)
 		center_container.scale = Vector2(1,1)

@@ -371,6 +371,7 @@ animations = [{
 script = ExtResource("1_gxndi")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+process_mode = 3
 libraries = {
 "": SubResource("AnimationLibrary_i341x")
 }

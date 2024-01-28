@@ -26,7 +26,6 @@ func become_happy():
 func on_animation_finished(anim_name):
 	if not end_screen:
 		become_neutral()
-	
 
 func on_good_item_collected(item_type, count):
 	become_happy()
