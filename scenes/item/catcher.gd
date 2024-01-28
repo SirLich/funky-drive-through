@@ -13,7 +13,7 @@ var move_speed = 0.1
 @export var starting_item : ItemType
 	
 var last_stacked
-func add_new_item(new_item : ItemType):
+func add_new_item(new_item : ItemType, flipped : bool):
 	if last_stacked is StackedItem:
 		last_stacked.remote_transform_2d.remote_path = NodePath()
 	
@@ -28,7 +28,7 @@ func add_new_item(new_item : ItemType):
 	var new_stacked = stacked_item.instantiate()
 	new_stacked.follow = last_stacked
 	add_child(new_stacked)
-	new_stacked.configure_for_item(new_item)
+	new_stacked.configure_for_item(new_item, flipped)
 	last_stacked = new_stacked
 	last_stacked.remote_transform_2d.remote_path = top.get_path()
 
@@ -36,7 +36,7 @@ func add_new_item(new_item : ItemType):
 func _ready() -> void:
 	last_stacked = base
 	for i in range(1):
-		add_new_item(starting_item)
+		add_new_item(starting_item, false)
 	
 var tween : Tween
 func _process(delta: float) -> void:
@@ -49,5 +49,5 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	Global.item_collected.emit(body.item)
-	add_new_item(body.item)
+	add_new_item(body.item, body.flipped)
 	body.queue_free()

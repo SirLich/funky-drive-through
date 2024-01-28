@@ -4,6 +4,7 @@ class_name DroppedItem
 var item : ItemType
 @export var generic_dropped_scene : PackedScene
 
+var flipped = false
 func configure_for_item(item : ItemType):
 	self.item = item
 	
@@ -15,5 +16,8 @@ func configure_for_item(item : ItemType):
 		new_dropped_scene.texture = item.icon
 		new_dropped_scene.modulate = item.color
 		new_dropped_scene.scale *= item.scale_factor
-	new_dropped_scene.scale = Vector2(-1, 1)
+	
+	if randf() < 0.5:
+		flipped = true
+		new_dropped_scene.scale = new_dropped_scene.scale * Vector2(-1, 1)
 	add_child(new_dropped_scene)

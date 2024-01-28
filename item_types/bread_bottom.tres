@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="ItemType" load_steps=3 format=3 uid="uid://d1yfrpmdvv4ii"]
+[gd_resource type="Resource" script_class="ItemType" load_steps=4 format=3 uid="uid://d1yfrpmdvv4ii"]
 
 [ext_resource type="Texture2D" uid="uid://dh604j634xsap" path="res://assets/items/bread_bottom.png" id="1_0io87"]
 [ext_resource type="Script" path="res://item_type.gd" id="1_x0los"]
+
+[sub_resource type="AudioStream" id="AudioStream_ge7jv"]
 
 [resource]
 script = ExtResource("1_x0los")
@@ -9,3 +11,4 @@ icon = ExtResource("1_0io87")
 color = Color(0.85098, 0.541176, 0.321569, 1)
 name = "Bread Bottom"
 scale_factor = 1.5
+audio = SubResource("AudioStream_ge7jv")

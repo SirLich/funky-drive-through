@@ -12,7 +12,7 @@ class_name StackedItem
 
 var tween : Tween
 
-func configure_for_item(item : ItemType):
+func configure_for_item(item : ItemType, flipped: bool):
 	var new_stacked_scene
 	if item.stacked_scene:
 		new_stacked_scene = item.stacked_scene.instantiate()
@@ -21,6 +21,9 @@ func configure_for_item(item : ItemType):
 		new_stacked_scene.texture = item.icon
 		new_stacked_scene.modulate = item.color
 		new_stacked_scene.scale *= item.scale_factor
+		
+	if flipped:
+		new_stacked_scene.scale = new_stacked_scene.scale * Vector2(-1, 1)
 	add_child(new_stacked_scene)
 
 func _process(delta: float) -> void:

@@ -169,6 +169,7 @@ stream = ExtResource("5_2yt2d")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("7_2037t")
+volume_db = 17.143
 autoplay = true
 
 [node name="Art" type="Node2D" parent="."]
