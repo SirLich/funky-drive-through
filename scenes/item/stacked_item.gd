@@ -3,7 +3,7 @@ class_name StackedItem
 
 @export var follow = Node
 @export var stack_height = -25
-@export var follow_time = 0.01
+@export var follow_time = 0.025
 
 @onready var remote_transform_2d: RemoteTransform2D = $RemoteTransform2D
 @onready var sprite: Sprite2D = $Sprite

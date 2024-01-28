@@ -7,7 +7,7 @@
 [resource]
 script = ExtResource("1_hb2if")
 icon = ExtResource("1_alqh6")
-color = Color(0.380392, 0.180392, 0.109804, 1)
+color = Color(0.619608, 0.282353, 0.2, 1)
 name = "Patty"
 scale_factor = 1.0
 audio = ExtResource("1_j2erw")

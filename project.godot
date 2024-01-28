@@ -57,3 +57,7 @@ click={
 [physics]
 
 2d/default_gravity=2000.0
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0.203922, 0.168627, 0.227451, 1)

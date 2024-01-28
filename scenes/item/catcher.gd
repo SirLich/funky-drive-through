@@ -4,7 +4,7 @@ extends Node2D
 @export var border_right = 1700
 @export var stacked_item : PackedScene
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
-
+var move_speed = 0.1
 @export var default_stream : AudioStream
 
 @export var base : Node
@@ -38,8 +38,14 @@ func _ready() -> void:
 	for i in range(1):
 		add_new_item(starting_item)
 	
+var tween : Tween
 func _process(delta: float) -> void:
-	base.global_position.x = clamp(get_global_mouse_position().x, border_left, border_right)
+	if tween:
+		tween.kill()
+	
+	tween = get_tree().create_tween()
+	tween.tween_property(base, "global_position:x", get_global_mouse_position().x, move_speed)
+	base.global_position.x = clamp(base.global_position.x, border_left, border_right)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	Global.item_collected.emit(body.item)
