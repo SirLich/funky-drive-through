@@ -18,8 +18,8 @@ func add_new_item(new_item : ItemType):
 		last_stacked.remote_transform_2d.remote_path = NodePath()
 	
 	var stream_to_use
-	if new_item.stream:
-		stream_to_use = new_item.stream
+	if new_item.audio:
+		stream_to_use = new_item.audio
 	else:
 		stream_to_use = default_stream
 	audio_stream_player.stream = stream_to_use

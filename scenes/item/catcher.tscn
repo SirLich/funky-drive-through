@@ -20,6 +20,7 @@ top = NodePath("Top")
 starting_item = ExtResource("3_onxk0")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = 12.861
 
 [node name="Top" type="Area2D" parent="."]
 collision_mask = 2
