@@ -1,8 +1,8 @@
 extends Control
 
-@onready var recipe_label: Label = $RecipeLabel
-@onready var items: HBoxContainer = $Items
-@onready var mistake_label: Label = $Mistakes/MistakeLabel
+@onready var recipe_label: Label = $Shift/RecipeLabel
+@onready var items: HBoxContainer = $Shift/Items
+@onready var mistake_label: Label = $Shift/Mistakes/MistakeLabel
 
 @export var item_box_ui : PackedScene
 var recipe

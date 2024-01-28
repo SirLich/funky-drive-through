@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dcfett6ns4vqq"]
+[gd_scene load_steps=34 format=3 uid="uid://dcfett6ns4vqq"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_6brd1"]
 [ext_resource type="PackedScene" uid="uid://baau16ndim5ve" path="res://end_screen.tscn" id="2_fthv7"]
@@ -21,15 +21,80 @@
 
 [sub_resource type="Environment" id="Environment_1begj"]
 
+[sub_resource type="Animation" id="Animation_6kx3j"]
+resource_name = "begin"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HUD/Shift:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(877, 82), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HUD/Shift/ClickToBegin:label_settings:font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_00qca"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HUD/Shift:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HUD/Shift/ClickToBegin:label_settings:font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wa3xa"]
+_data = {
+"RESET": SubResource("Animation_00qca"),
+"begin": SubResource("Animation_6kx3j")
+}
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_2rdmc"]
 atlas = ExtResource("7_1n7r7")
 region = Rect2(1737.93, 1356.28, 250.635, 660.765)
 
 [sub_resource type="LabelSettings" id="LabelSettings_j71ag"]
-font_size = 35
+font_size = 50
 
 [sub_resource type="LabelSettings" id="LabelSettings_bx1hl"]
 font_size = 60
+shadow_size = 26
+shadow_color = Color(0, 0, 0, 0.866667)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mrp7q"]
+font_size = 105
 shadow_size = 26
 shadow_color = Color(0, 0, 0, 0.866667)
 
@@ -119,7 +184,18 @@ offset_bottom = 40.0
 script = ExtResource("9_k1kde")
 item_box_ui = ExtResource("7_5rb7w")
 
-[node name="Mistakes" type="VBoxContainer" parent="HUD"]
+[node name="UIAnimation" type="AnimationPlayer" parent="HUD"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_wa3xa")
+}
+
+[node name="Shift" type="Control" parent="HUD"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Mistakes" type="VBoxContainer" parent="HUD/Shift"]
 layout_mode = 0
 offset_left = 602.0
 offset_top = 137.0
@@ -127,7 +203,7 @@ offset_right = 751.0
 offset_bottom = 391.0
 metadata/_edit_group_ = true
 
-[node name="ItemBox" type="TextureRect" parent="HUD/Mistakes"]
+[node name="ItemBox" type="TextureRect" parent="HUD/Shift/Mistakes"]
 self_modulate = Color(0.678431, 0.337255, 0.317647, 1)
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
@@ -135,13 +211,13 @@ texture = SubResource("AtlasTexture_2rdmc")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="MistakeLabel" type="Label" parent="HUD/Mistakes"]
+[node name="MistakeLabel" type="Label" parent="HUD/Shift/Mistakes"]
 layout_mode = 2
 text = "0/0"
 label_settings = SubResource("LabelSettings_j71ag")
 horizontal_alignment = 1
 
-[node name="RecipeLabel" type="Label" parent="HUD"]
+[node name="RecipeLabel" type="Label" parent="HUD/Shift"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 29.0
@@ -151,7 +227,7 @@ text = "Flaming Hot Cheetos"
 label_settings = SubResource("LabelSettings_bx1hl")
 horizontal_alignment = 1
 
-[node name="Items" type="HBoxContainer" parent="HUD"]
+[node name="Items" type="HBoxContainer" parent="HUD/Shift"]
 layout_mode = 1
 offset_left = 15.0
 offset_top = 103.0
@@ -159,11 +235,22 @@ offset_right = 788.0
 offset_bottom = 357.0
 theme_override_constants/separation = 50
 
-[node name="ItemBoxUI" parent="HUD/Items" instance=ExtResource("7_5rb7w")]
+[node name="ItemBoxUI" parent="HUD/Shift/Items" instance=ExtResource("7_5rb7w")]
 layout_mode = 2
+
+[node name="ClickToBegin" type="Label" parent="HUD/Shift"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 400.0
+offset_right = 775.0
+offset_bottom = 483.0
+text = "CLICK TO BEGIN"
+label_settings = SubResource("LabelSettings_mrp7q")
+horizontal_alignment = 1
 
 [node name="FinishScreen" type="Control" parent="HUD"]
 process_mode = 3
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
