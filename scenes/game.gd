@@ -126,7 +126,16 @@ func _ready() -> void:
 func start_dropping():
 	dropper.prepare_for_recipe(recipe)
 	
+@onready var music: AudioStreamPlayer2D = $Sounds/Music
+@export var default_music : AudioStream
+
 func prepare_for_recipe(recipe : Recipe):
+	if recipe.music:
+		music.stream = recipe.music
+	else:
+		music.stream = default_music
+	music.play()
+	
 	Global.is_pending_finish = false
 	self.recipe = recipe
 	hud.prepare_for_recipe(recipe)

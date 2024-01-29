@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Recipe" load_steps=10 format=3 uid="uid://bkrsinfgtpgk6"]
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://bkrsinfgtpgk6"]
 
 [ext_resource type="Script" path="res://resources/recipes/recipe.gd" id="1_3g8ry"]
 [ext_resource type="PackedScene" uid="uid://dhge2q7r58cps" path="res://resources/scenes/walrus.tscn" id="1_7wsw6"]
@@ -6,6 +6,7 @@
 [ext_resource type="Resource" uid="uid://y3g8isvibqsa" path="res://resources/item_types/can.tres" id="3_5ew8a"]
 [ext_resource type="Resource" uid="uid://gpvcw7cmcvjt" path="res://resources/item_types/shoe.tres" id="4_yy1li"]
 [ext_resource type="Resource" uid="uid://ur8o6aoa0roc" path="res://resources/item_types/unicorn.tres" id="5_cwu4v"]
+[ext_resource type="AudioStream" uid="uid://bwlfcy0ihjxwt" path="res://assets/audio/music/walruh_play.wav" id="6_qnpkr"]
 
 [sub_resource type="Resource" id="Resource_uxfa5"]
 script = ExtResource("2_74634")
@@ -31,3 +32,4 @@ good_chance = 0.55
 bun_chance = 0.1
 character = ExtResource("1_7wsw6")
 gravity = 620
+music = ExtResource("6_qnpkr")

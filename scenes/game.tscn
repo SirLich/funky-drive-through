@@ -149,6 +149,7 @@ size = Vector2(2366, 412.5)
 script = ExtResource("1_ckmoc")
 end_scene = ExtResource("3_s0g5e")
 item_box_ui = ExtResource("4_e2rpy")
+default_music = ExtResource("7_efirv")
 
 [node name="Sounds" type="Node2D" parent="."]
 process_mode = 3

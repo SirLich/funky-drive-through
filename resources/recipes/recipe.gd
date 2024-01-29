@@ -8,3 +8,4 @@ class_name Recipe
 @export var bun_chance = 0.2
 @export var character : PackedScene
 @export var gravity = 500
+@export var music : AudioStream
