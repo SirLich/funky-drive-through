@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://cxhnkijr3r6v5"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_iq4jb"]
-[ext_resource type="Texture2D" uid="uid://bldnjnijkl5f0" path="res://assets/frames/background_menu.png" id="2_pk0yp"]
-[ext_resource type="Texture2D" uid="uid://daiaoq7qr7b3t" path="res://assets/misc/button.tres" id="3_sf6ye"]
-[ext_resource type="AudioStream" uid="uid://dc5jltp41cf8q" path="res://assets/audio/music/menu_song.wav" id="4_3yigo"]
+[ext_resource type="Script" path="res://scenes/ui/menu/menu.gd" id="1_5uuxi"]
+[ext_resource type="Texture2D" uid="uid://bldnjnijkl5f0" path="res://assets/frames/background_menu.png" id="2_03tnl"]
+[ext_resource type="Texture2D" uid="uid://daiaoq7qr7b3t" path="res://assets/misc/button.tres" id="3_ive1g"]
+[ext_resource type="AudioStream" uid="uid://dc5jltp41cf8q" path="res://assets/audio/music/menu_song.wav" id="4_i5ue1"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nve3i"]
 load_path = "res://.godot/imported/frame.png-b49da370ab5b416325f31bcd38e64bfc.ctex"
@@ -23,13 +23,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_iq4jb")
+script = ExtResource("1_5uuxi")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 1923.0
 offset_bottom = 1082.0
-texture = ExtResource("2_pk0yp")
+texture = ExtResource("2_03tnl")
 expand_mode = 1
 
 [node name="TextureButton" type="TextureButton" parent="."]
@@ -39,7 +39,7 @@ offset_left = 1328.0
 offset_top = 516.0
 offset_right = 1782.0
 offset_bottom = 779.0
-texture_normal = ExtResource("3_sf6ye")
+texture_normal = ExtResource("3_ive1g")
 texture_hover = SubResource("AtlasTexture_3wi2x")
 ignore_texture_size = true
 stretch_mode = 0
@@ -54,7 +54,7 @@ text = "PLAY"
 label_settings = SubResource("LabelSettings_87itx")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_3yigo")
+stream = ExtResource("4_i5ue1")
 autoplay = true
 
 [connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]

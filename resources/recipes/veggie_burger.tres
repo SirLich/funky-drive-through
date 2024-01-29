@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Recipe" load_steps=10 format=3 uid="uid://r5wcv78rfv5w"]
 
 [ext_resource type="PackedScene" uid="uid://bwckprmdmmhxv" path="res://scenes/animals/bird.tscn" id="1_8sp3f"]
-[ext_resource type="Script" path="res://recipe_item.gd" id="1_nes6u"]
-[ext_resource type="Script" path="res://recipe.gd" id="1_npdxe"]
+[ext_resource type="Script" path="res://resources/recipe_item.gd" id="1_nes6u"]
+[ext_resource type="Script" path="res://resources/recipes/recipe.gd" id="1_npdxe"]
 [ext_resource type="Resource" uid="uid://q6fa3t2063uj" path="res://resources/item_types/tomato.tres" id="2_o2lyb"]
 [ext_resource type="Resource" uid="uid://xd01ccv1itdl" path="res://resources/item_types/eggplant.tres" id="3_lf5ob"]
 [ext_resource type="Resource" uid="uid://bpdphbdmki6ua" path="res://resources/item_types/pickle.tres" id="4_bptjw"]

@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Recipe" load_steps=8 format=3 uid="uid://cm4cxynvvj2bl"]
 
-[ext_resource type="Script" path="res://recipe.gd" id="1_s7l88"]
+[ext_resource type="Script" path="res://resources/recipes/recipe.gd" id="1_s7l88"]
 [ext_resource type="PackedScene" uid="uid://dhge2q7r58cps" path="res://resources/scenes/walrus.tscn" id="1_x8okd"]
-[ext_resource type="Script" path="res://recipe_item.gd" id="2_15eea"]
+[ext_resource type="Script" path="res://resources/recipe_item.gd" id="2_15eea"]
 [ext_resource type="Resource" uid="uid://dnykdn0my3pq" path="res://resources/item_types/fish.tres" id="3_g1wwg"]
 [ext_resource type="Resource" uid="uid://bpdphbdmki6ua" path="res://resources/item_types/pickle.tres" id="4_8fuwv"]
 

@@ -15,8 +15,6 @@ extends Node2D
 @onready var finish_screen: Control = $HUD/FinishScreen
 @onready var spawn_position: Marker2D = $SpawnPosition
 
-@export var win_scene : PackedScene
-
 @onready var success_text: Label = $HUD/FinishScreen/ColorRect/VBoxContainer/SuccessText
 @onready var goal_label: Label = $HUD/FinishScreen/ColorRect/VBoxContainer/GoalRow/GoalLabel
 @onready var mistakes_label: Label = $HUD/FinishScreen/ColorRect/VBoxContainer/MistakesRow/MistakesLabel

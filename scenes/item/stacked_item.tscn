@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://cwo33wdcofuqm"]
 
 [ext_resource type="Script" path="res://scenes/item/stacked_item.gd" id="1_q6wav"]
-[ext_resource type="PackedScene" uid="uid://dbjv7s462ldbm" path="res://generic_item.tscn" id="2_vr7sk"]
+[ext_resource type="PackedScene" uid="uid://dbjv7s462ldbm" path="res://scenes/item/generic_item.tscn" id="2_46f81"]
 
 [node name="StackedItem" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_q6wav")
-generic_dropped_scene = ExtResource("2_vr7sk")
+generic_dropped_scene = ExtResource("2_46f81")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]

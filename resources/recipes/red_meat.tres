@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Recipe" load_steps=8 format=3 uid="uid://uojon2jy1wdp"]
 
-[ext_resource type="Script" path="res://recipe.gd" id="1_bdqhn"]
+[ext_resource type="Script" path="res://resources/recipes/recipe.gd" id="1_bdqhn"]
 [ext_resource type="PackedScene" uid="uid://bqyyp7bw0sr86" path="res://scenes/animals/dog.tscn" id="1_n4drr"]
-[ext_resource type="Script" path="res://recipe_item.gd" id="2_2j720"]
+[ext_resource type="Script" path="res://resources/recipe_item.gd" id="2_2j720"]
 [ext_resource type="Resource" uid="uid://doaxlys0o21tb" path="res://resources/item_types/steak.tres" id="3_dca1a"]
 [ext_resource type="Resource" uid="uid://bg4ossqiixqge" path="res://resources/item_types/bone.tres" id="4_q88rj"]
 

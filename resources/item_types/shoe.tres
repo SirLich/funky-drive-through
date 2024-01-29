@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ItemType" load_steps=4 format=3 uid="uid://gpvcw7cmcvjt"]
 
-[ext_resource type="Script" path="res://item_type.gd" id="1_bdhwj"]
+[ext_resource type="Script" path="res://resources/item_types/item_type.gd" id="1_bdhwj"]
 [ext_resource type="AudioStream" uid="uid://crik25ksilvlm" path="res://assets/audio/resources/impact_low.tres" id="1_jrifr"]
 [ext_resource type="Texture2D" uid="uid://xcxaxhlvoefi" path="res://assets/items/shoe_flat.png" id="1_li1jl"]
 

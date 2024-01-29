@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ItemType" load_steps=4 format=3 uid="uid://d1yfrpmdvv4ii"]
 
 [ext_resource type="Texture2D" uid="uid://dh604j634xsap" path="res://assets/items/bread_bottom.png" id="1_0io87"]
-[ext_resource type="Script" path="res://item_type.gd" id="1_x0los"]
+[ext_resource type="Script" path="res://resources/item_types/item_type.gd" id="1_x0los"]
 
 [sub_resource type="AudioStream" id="AudioStream_ge7jv"]
 

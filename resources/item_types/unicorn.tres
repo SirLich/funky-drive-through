@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="ItemType" load_steps=5 format=3 uid="uid://ur8o6aoa0roc"]
 
 [ext_resource type="Texture2D" uid="uid://dv2a3sjanlaso" path="res://assets/items/unicorn.png" id="1_1kqw1"]
-[ext_resource type="Script" path="res://item_type.gd" id="1_4kgnj"]
+[ext_resource type="Script" path="res://resources/item_types/item_type.gd" id="1_4kgnj"]
 [ext_resource type="AudioStream" uid="uid://dywumm7wsvjb5" path="res://assets/audio/sfx/impact/dropping_food_sound.wav" id="1_gs56d"]
-[ext_resource type="PackedScene" uid="uid://5fi3lw3pawjg" path="res://unicorn_stacked_scene.tscn" id="3_kaowj"]
+[ext_resource type="PackedScene" uid="uid://5fi3lw3pawjg" path="res://resources/scenes/unicorn_stacked_scene.tscn" id="3_kaowj"]
 
 [resource]
 script = ExtResource("1_4kgnj")

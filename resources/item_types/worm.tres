@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://i82kogf6jms2" path="res://assets/items/worm_flat.png" id="1_afy2u"]
 [ext_resource type="PackedScene" uid="uid://ogsw82lf1u2j" path="res://scenes/item/dropped_items/dropped_worm.tscn" id="1_rrd0l"]
 [ext_resource type="AudioStream" uid="uid://dost0mxm307gd" path="res://assets/audio/resources/impact_soft.tres" id="1_vm8hw"]
-[ext_resource type="Script" path="res://item_type.gd" id="2_pty54"]
+[ext_resource type="Script" path="res://resources/item_types/item_type.gd" id="2_pty54"]
 [ext_resource type="PackedScene" uid="uid://bw1pv1u7i1iyd" path="res://scenes/item/dropped_items/stacked_worm.tscn" id="4_wi6qk"]
 
 [resource]

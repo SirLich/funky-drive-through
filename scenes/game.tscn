@@ -1,24 +1,23 @@
-[gd_scene load_steps=36 format=3 uid="uid://dcfett6ns4vqq"]
+[gd_scene load_steps=35 format=3 uid="uid://dcfett6ns4vqq"]
 
-[ext_resource type="Script" path="res://game.gd" id="1_6brd1"]
-[ext_resource type="PackedScene" uid="uid://baau16ndim5ve" path="res://end_screen.tscn" id="2_fthv7"]
-[ext_resource type="PackedScene" uid="uid://dcw8fifnxbkli" path="res://scenes/win.tscn" id="2_xbt8u"]
-[ext_resource type="PackedScene" uid="uid://bde5jwauuhx81" path="res://scenes/item/catcher.tscn" id="4_2i66j"]
-[ext_resource type="Texture2D" uid="uid://b4te54epp1n14" path="res://assets/frames/background.png" id="4_e5ape"]
-[ext_resource type="PackedScene" uid="uid://d1nn1ff7rwlbn" path="res://scenes/item/dropped_item.tscn" id="5_1bqwg"]
-[ext_resource type="AudioStream" uid="uid://mx7dqfnfyml1" path="res://assets/audio/sfx/misc/success_sound.wav" id="5_2yt2d"]
-[ext_resource type="AudioStream" uid="uid://by4f4dfsn3bu" path="res://assets/audio/sfx/misc/pity_sound.wav" id="5_72ibb"]
-[ext_resource type="Script" path="res://dropper.gd" id="6_ebwai"]
-[ext_resource type="Texture2D" uid="uid://cnd1kj7020uls" path="res://assets/frames/frame.png" id="7_1n7r7"]
-[ext_resource type="PackedScene" uid="uid://blv1sdwd4eyiq" path="res://scenes/misc/item_box_ui.tscn" id="7_5rb7w"]
-[ext_resource type="AudioStream" uid="uid://dutekcqjlcxcm" path="res://assets/audio/music/game_song.wav" id="7_2037t"]
-[ext_resource type="Script" path="res://hud.gd" id="9_k1kde"]
-[ext_resource type="LabelSettings" uid="uid://by2l3bawx6flr" path="res://tutorial_label.tres" id="10_3noq0"]
-[ext_resource type="Script" path="res://tutorial.gd" id="10_vqbed"]
-[ext_resource type="Texture2D" uid="uid://bnbhditt20lap" path="res://assets/frames/symbols.png" id="11_18tpj"]
-[ext_resource type="Script" path="res://kill_zone.gd" id="13_e048j"]
-[ext_resource type="Texture2D" uid="uid://vlejmxso1xi4" path="res://assets/frames/order_frame.png" id="13_ycflu"]
-[ext_resource type="Texture2D" uid="uid://7uytjmrtwfaq" path="res://assets/frames/frame_result.png" id="14_6ags6"]
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_ckmoc"]
+[ext_resource type="PackedScene" uid="uid://baau16ndim5ve" path="res://scenes/ui/end_screen/end_screen.tscn" id="3_s0g5e"]
+[ext_resource type="PackedScene" uid="uid://blv1sdwd4eyiq" path="res://scenes/ui/item_box/item_box_ui.tscn" id="4_e2rpy"]
+[ext_resource type="AudioStream" uid="uid://by4f4dfsn3bu" path="res://assets/audio/sfx/misc/pity_sound.wav" id="5_a5c3q"]
+[ext_resource type="AudioStream" uid="uid://mx7dqfnfyml1" path="res://assets/audio/sfx/misc/success_sound.wav" id="6_lf8jj"]
+[ext_resource type="AudioStream" uid="uid://dutekcqjlcxcm" path="res://assets/audio/music/game_song.wav" id="7_efirv"]
+[ext_resource type="Texture2D" uid="uid://b4te54epp1n14" path="res://assets/frames/background.png" id="8_on7by"]
+[ext_resource type="PackedScene" uid="uid://bde5jwauuhx81" path="res://scenes/item/catcher.tscn" id="9_o1ea7"]
+[ext_resource type="Script" path="res://scenes/dropper/dropper.gd" id="10_atw0u"]
+[ext_resource type="PackedScene" uid="uid://d1nn1ff7rwlbn" path="res://scenes/item/dropped_item.tscn" id="11_466xo"]
+[ext_resource type="Script" path="res://scenes/ui/hud.gd" id="12_efqn4"]
+[ext_resource type="Texture2D" uid="uid://vlejmxso1xi4" path="res://assets/frames/order_frame.png" id="13_gmxgm"]
+[ext_resource type="Texture2D" uid="uid://cnd1kj7020uls" path="res://assets/frames/frame.png" id="14_ydsin"]
+[ext_resource type="Texture2D" uid="uid://7uytjmrtwfaq" path="res://assets/frames/frame_result.png" id="15_jtai5"]
+[ext_resource type="Texture2D" uid="uid://bnbhditt20lap" path="res://assets/frames/symbols.png" id="16_nf57k"]
+[ext_resource type="Script" path="res://scripts/tutorial.gd" id="17_16m7q"]
+[ext_resource type="LabelSettings" uid="uid://by2l3bawx6flr" path="res://assets/misc/tutorial_label.tres" id="18_yhj1o"]
+[ext_resource type="Script" path="res://scripts/kill_zone.gd" id="19_02ytf"]
 
 [sub_resource type="Environment" id="Environment_1begj"]
 
@@ -95,7 +94,7 @@ _data = {
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2rdmc"]
-atlas = ExtResource("7_1n7r7")
+atlas = ExtResource("14_ydsin")
 region = Rect2(1737.93, 1356.28, 250.635, 660.765)
 
 [sub_resource type="LabelSettings" id="LabelSettings_j71ag"]
@@ -119,18 +118,18 @@ outline_size = 20
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0b81q"]
-atlas = ExtResource("11_18tpj")
+atlas = ExtResource("16_nf57k")
 region = Rect2(25.9796, 27.5487, 586.886, 539.81)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tglfl"]
-atlas = ExtResource("11_18tpj")
+atlas = ExtResource("16_nf57k")
 region = Rect2(750.957, 27.5487, 659.07, 586.886)
 
 [sub_resource type="LabelSettings" id="LabelSettings_akisb"]
 font_size = 40
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5d3lm"]
-atlas = ExtResource("7_1n7r7")
+atlas = ExtResource("14_ydsin")
 region = Rect2(1230.78, 128.59, 801.272, 463.295)
 
 [sub_resource type="LabelSettings" id="LabelSettings_40qpg"]
@@ -147,22 +146,21 @@ outline_color = Color(0, 0, 0, 1)
 size = Vector2(2366, 412.5)
 
 [node name="Game" type="Node2D"]
-script = ExtResource("1_6brd1")
-win_scene = ExtResource("2_xbt8u")
-end_scene = ExtResource("2_fthv7")
-item_box_ui = ExtResource("7_5rb7w")
+script = ExtResource("1_ckmoc")
+end_scene = ExtResource("3_s0g5e")
+item_box_ui = ExtResource("4_e2rpy")
 
 [node name="Sounds" type="Node2D" parent="."]
 process_mode = 3
 
 [node name="FailSound" type="AudioStreamPlayer" parent="Sounds"]
-stream = ExtResource("5_72ibb")
+stream = ExtResource("5_a5c3q")
 
 [node name="SuccessSound" type="AudioStreamPlayer" parent="Sounds"]
-stream = ExtResource("5_2yt2d")
+stream = ExtResource("6_lf8jj")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="Sounds"]
-stream = ExtResource("7_2037t")
+stream = ExtResource("7_efirv")
 volume_db = 17.143
 autoplay = true
 
@@ -171,7 +169,7 @@ autoplay = true
 [node name="TextureRect" type="TextureRect" parent="Art"]
 offset_right = 1938.0
 offset_bottom = 1090.0
-texture = ExtResource("4_e5ape")
+texture = ExtResource("8_on7by")
 expand_mode = 1
 
 [node name="ColorRect" type="ColorRect" parent="Art"]
@@ -179,7 +177,7 @@ offset_right = 756.0
 offset_bottom = 133.0
 color = Color(0.403922, 0.266667, 0.286275, 1)
 
-[node name="Catcher" parent="." instance=ExtResource("4_2i66j")]
+[node name="Catcher" parent="." instance=ExtResource("9_o1ea7")]
 position = Vector2(1229, 946)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -191,8 +189,8 @@ scale = Vector2(0.29, 0.29)
 
 [node name="Dropper" type="Node2D" parent="."]
 position = Vector2(827, -417)
-script = ExtResource("6_ebwai")
-item_scene = ExtResource("5_1bqwg")
+script = ExtResource("10_atw0u")
+item_scene = ExtResource("11_466xo")
 
 [node name="Timer" type="Timer" parent="Dropper"]
 autostart = true
@@ -202,8 +200,8 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("9_k1kde")
-item_box_ui = ExtResource("7_5rb7w")
+script = ExtResource("12_efqn4")
+item_box_ui = ExtResource("4_e2rpy")
 
 [node name="UIAnimation" type="AnimationPlayer" parent="HUD"]
 root_node = NodePath("../..")
@@ -225,7 +223,7 @@ offset_left = 12.0
 offset_top = -5.0
 offset_right = 1954.0
 offset_bottom = 818.0
-texture = ExtResource("13_ycflu")
+texture = ExtResource("13_gmxgm")
 expand_mode = 1
 
 [node name="Mistakes" type="VBoxContainer" parent="HUD/Shift"]
@@ -268,13 +266,13 @@ offset_right = 788.0
 offset_bottom = 357.0
 theme_override_constants/separation = 50
 
-[node name="ItemBoxUI" parent="HUD/Shift/Items" instance=ExtResource("7_5rb7w")]
+[node name="ItemBoxUI" parent="HUD/Shift/Items" instance=ExtResource("4_e2rpy")]
 layout_mode = 2
 
-[node name="ItemBoxUI2" parent="HUD/Shift/Items" instance=ExtResource("7_5rb7w")]
+[node name="ItemBoxUI2" parent="HUD/Shift/Items" instance=ExtResource("4_e2rpy")]
 layout_mode = 2
 
-[node name="ItemBoxUI3" parent="HUD/Shift/Items" instance=ExtResource("7_5rb7w")]
+[node name="ItemBoxUI3" parent="HUD/Shift/Items" instance=ExtResource("4_e2rpy")]
 layout_mode = 2
 
 [node name="ClickToBegin" type="Label" parent="HUD/Shift"]
@@ -300,7 +298,7 @@ offset_left = -1.0
 offset_top = -27.0
 offset_right = 1919.0
 offset_bottom = 1053.0
-texture = ExtResource("14_6ags6")
+texture = ExtResource("15_jtai5")
 expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HUD/FinishScreen/ColorRect"]
@@ -409,7 +407,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("10_vqbed")
+script = ExtResource("17_16m7q")
 
 [node name="Label" type="Label" parent="Tutorial"]
 layout_mode = 0
@@ -418,7 +416,7 @@ offset_top = 897.0
 offset_right = 1472.0
 offset_bottom = 939.0
 text = "Use Mouse to Collect Ingredients"
-label_settings = ExtResource("10_3noq0")
+label_settings = ExtResource("18_yhj1o")
 
 [node name="Label2" type="Label" parent="Tutorial"]
 layout_mode = 0
@@ -427,7 +425,7 @@ offset_top = 405.0
 offset_right = 512.0
 offset_bottom = 447.0
 text = "Follow the recipe!"
-label_settings = ExtResource("10_3noq0")
+label_settings = ExtResource("18_yhj1o")
 
 [node name="CountdownLabel" type="Label" parent="Tutorial"]
 layout_mode = 0
@@ -443,7 +441,7 @@ vertical_alignment = 1
 metadata/_edit_lock_ = true
 
 [node name="KillZone" type="Area2D" parent="."]
-script = ExtResource("13_e048j")
+script = ExtResource("19_02ytf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
 position = Vector2(1057, 1498)

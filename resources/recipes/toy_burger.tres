@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://cxpnffp2kw3wf"]
 
-[ext_resource type="Script" path="res://recipe.gd" id="1_c8hux"]
+[ext_resource type="Script" path="res://resources/recipes/recipe.gd" id="1_c8hux"]
 [ext_resource type="PackedScene" uid="uid://bqyyp7bw0sr86" path="res://scenes/animals/dog.tscn" id="1_hu8fd"]
-[ext_resource type="Script" path="res://recipe_item.gd" id="2_re3h0"]
+[ext_resource type="Script" path="res://resources/recipe_item.gd" id="2_re3h0"]
 [ext_resource type="Resource" uid="uid://ur8o6aoa0roc" path="res://resources/item_types/unicorn.tres" id="3_gjb1x"]
 
 [sub_resource type="Resource" id="Resource_4j0sn"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://blv1sdwd4eyiq"]
 
-[ext_resource type="Script" path="res://item_box_ui.gd" id="1_rdxyq"]
+[ext_resource type="Script" path="res://scenes/ui/item_box/item_box_ui.gd" id="1_ixo4l"]
 [ext_resource type="Texture2D" uid="uid://cnd1kj7020uls" path="res://assets/frames/frame.png" id="2_enqfa"]
 [ext_resource type="Texture2D" uid="uid://bv1iqqog0x8rs" path="res://assets/items/worm_fall.png" id="3_rsa5e"]
 
@@ -15,7 +15,7 @@ region = Rect2(49.4001, 36.6001, 533.5, 553.3)
 font_size = 50
 
 [node name="ItemBoxUI" type="VBoxContainer"]
-script = ExtResource("1_rdxyq")
+script = ExtResource("1_ixo4l")
 
 [node name="NameLabel" type="Label" parent="."]
 layout_mode = 2

@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Recipe" load_steps=10 format=3 uid="uid://c10uio2gylx77"]
 
 [ext_resource type="PackedScene" uid="uid://bqyyp7bw0sr86" path="res://scenes/animals/dog.tscn" id="1_e4s8i"]
-[ext_resource type="Script" path="res://recipe_item.gd" id="1_i1x2l"]
-[ext_resource type="Script" path="res://recipe.gd" id="1_wdnct"]
+[ext_resource type="Script" path="res://resources/recipe_item.gd" id="1_i1x2l"]
+[ext_resource type="Script" path="res://resources/recipes/recipe.gd" id="1_wdnct"]
 [ext_resource type="Resource" uid="uid://0natumgqnctk" path="res://resources/item_types/patty.tres" id="2_mqifa"]
 [ext_resource type="Resource" uid="uid://bfv6uyljs0isy" path="res://resources/item_types/cheese.tres" id="3_wdjl3"]
 [ext_resource type="Resource" uid="uid://q6fa3t2063uj" path="res://resources/item_types/tomato.tres" id="4_hf85m"]

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Recipe" load_steps=8 format=3 uid="uid://bn1qfv8vxs8xt"]
 
-[ext_resource type="Script" path="res://recipe.gd" id="1_h7rt7"]
-[ext_resource type="Script" path="res://recipe_item.gd" id="1_i6mgj"]
+[ext_resource type="Script" path="res://resources/recipes/recipe.gd" id="1_h7rt7"]
+[ext_resource type="Script" path="res://resources/recipe_item.gd" id="1_i6mgj"]
 [ext_resource type="PackedScene" uid="uid://bwckprmdmmhxv" path="res://scenes/animals/bird.tscn" id="1_y0qs8"]
 [ext_resource type="Resource" uid="uid://l2kx6vi2yus8" path="res://resources/item_types/worm.tres" id="2_74ovj"]
 [ext_resource type="Resource" uid="uid://bktwpessi4585" path="res://resources/item_types/spider.tres" id="3_kf5f6"]
