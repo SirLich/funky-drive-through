@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bqyyp7bw0sr86"]
+[gd_scene load_steps=33 format=3 uid="uid://bqyyp7bw0sr86"]
 
 [ext_resource type="Script" path="res://scenes/animals/animal.gd" id="1_0v3wu"]
 [ext_resource type="AudioStream" uid="uid://bnqhel1ekf2o5" path="res://assets/audio/sfx/dog/dog_good.wav" id="2_6lsbb"]
@@ -13,7 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://de23pnpdycueg" path="res://assets/characters/dog/face_back_angry.png" id="5_nkxog"]
 [ext_resource type="AudioStream" uid="uid://droyk2y7n6xjr" path="res://assets/audio/sfx/dog/dog_bad_1.wav" id="5_xxqt2"]
 [ext_resource type="Texture2D" uid="uid://c47roa25n408p" path="res://assets/characters/dog/face_back_happy.png" id="6_atrwf"]
+[ext_resource type="Texture2D" uid="uid://de5xu7oro378b" path="res://assets/characters/effects/dog_angry_effect.png" id="6_nnvpq"]
+[ext_resource type="Texture2D" uid="uid://dtt420avc6m18" path="res://assets/characters/effects/dog_happy_effect_a.png" id="7_lgmxf"]
 [ext_resource type="Texture2D" uid="uid://cfilsb81esnu7" path="res://assets/characters/dog/face_back_neutral.png" id="7_yowxg"]
+[ext_resource type="Texture2D" uid="uid://c6krxn4wiln0r" path="res://assets/characters/effects/dog_happy_effect_b.png" id="8_6umw5"]
+[ext_resource type="Texture2D" uid="uid://dpd8n6uhmuihs" path="res://assets/characters/effects/dog_happy_effect_c.png" id="9_n3t4f"]
 [ext_resource type="Texture2D" uid="uid://benloyq0wckvc" path="res://assets/characters/dog/nose_angry.png" id="11_r4pkf"]
 [ext_resource type="Texture2D" uid="uid://bb5q6q76xwxhn" path="res://assets/characters/dog/nose_happy.png" id="12_2py2e"]
 [ext_resource type="Texture2D" uid="uid://bte2evlm1g4bo" path="res://assets/characters/dog/nose_neutral.png" id="13_ma180"]
@@ -108,6 +112,30 @@ tracks/5/keys = {
 "update": 0,
 "values": [Vector2(0, 0)]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Effect:texture")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Effect:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_e11h4"]
 resource_name = "angry"
@@ -171,9 +199,46 @@ tracks/4/keys = {
 "update": 0,
 "values": [-0.436332, 0.436332, -0.436332, 0.436332, 0.0]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Effect:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_nnvpq")]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Effect:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.24, 1.24), Vector2(1, 1), Vector2(1.24, 1.24), Vector2(1, 1), Vector2(1.24, 1.24)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Effect:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.670588, 0, 0.0941176, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_jtllc"]
 resource_name = "happy"
+length = 0.7075
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -233,6 +298,30 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(0, 102), Vector2(6, -113), Vector2(0, 102), Vector2(6, -113)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Effect:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("7_lgmxf"), ExtResource("8_6umw5"), ExtResource("9_n3t4f"), null]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Effect:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.85098, 0.698039, 0, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_wb58p"]
@@ -297,6 +386,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [-0.0872665, 0.0, 0.0872665]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Effect:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qkxc0"]
@@ -416,7 +517,6 @@ animations = [{
 }]
 
 [node name="Dog" type="Node2D"]
-modulate = Color(0.72549, 0.478431, 0.313726, 1)
 script = ExtResource("1_0v3wu")
 
 [node name="HappySound" type="AudioStreamPlayer" parent="."]
@@ -431,11 +531,16 @@ libraries = {
 "": SubResource("AnimationLibrary_qkxc0")
 }
 
+[node name="Effect" type="Sprite2D" parent="."]
+modulate = Color(0.85098, 0.698039, 0, 1)
+
 [node name="Neck" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.72549, 0.478431, 0.313726, 1)
 sprite_frames = SubResource("SpriteFrames_5mjcq")
 animation = &"neutral"
 
 [node name="FaceGroup" type="Node2D" parent="."]
+modulate = Color(0.72549, 0.478431, 0.313726, 1)
 
 [node name="FaceBack" type="AnimatedSprite2D" parent="FaceGroup"]
 modulate = Color(0.619608, 0.47451, 0.572549, 1)
