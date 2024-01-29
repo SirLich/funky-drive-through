@@ -211,10 +211,10 @@ tracks/4/path = NodePath("Effect:texture")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("2_2l2d5")]
+"values": [ExtResource("2_2l2d5"), null]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -322,10 +322,10 @@ tracks/5/path = NodePath("Effect:texture")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("3_7r678")]
+"values": [ExtResource("3_7r678"), null]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
