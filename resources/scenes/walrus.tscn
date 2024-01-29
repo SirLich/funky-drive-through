@@ -1,6 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://dhge2q7r58cps"]
+[gd_scene load_steps=28 format=3 uid="uid://dhge2q7r58cps"]
 
 [ext_resource type="Script" path="res://scenes/animals/animal.gd" id="1_gxndi"]
+[ext_resource type="Texture2D" uid="uid://dl6w6ngfej4fv" path="res://assets/characters/effects/walrus_angry_effect.png" id="2_2l2d5"]
 [ext_resource type="AudioStream" uid="uid://c528q4k8es2og" path="res://assets/audio/sfx/walrus/walrus_good.wav" id="2_osnu5"]
 [ext_resource type="Texture2D" uid="uid://c180gby024nif" path="res://assets/characters/walrus/neck_angry.png" id="2_xwevo"]
 [ext_resource type="AudioStream" uid="uid://cc13m8vv8ttmr" path="res://assets/audio/sfx/walrus/walrus_happy.wav" id="3_3q7t4"]
@@ -91,6 +92,54 @@ tracks/5/keys = {
 "update": 0,
 "values": [Vector2(1, 1)]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Effect:texture")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Effect:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Effect:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Effect:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_mkamw"]
 resource_name = "angry"
@@ -141,6 +190,54 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [-0.322886, -0.214675, -0.0541052, 0.268781, -0.162316, 0.16057, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Effect:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_2l2d5")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Effect:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.12549, 0.0745098, 0.180392, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Effect:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-58, -180)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Effect:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.09, 0.09), Vector2(1, 1), Vector2(1.1, 1.1)]
 }
 
 [sub_resource type="Animation" id="Animation_we27v"]
@@ -398,3 +495,5 @@ animation = &"neutral"
 modulate = Color(0.309804, 0.301961, 0.427451, 1)
 sprite_frames = SubResource("SpriteFrames_f60wr")
 animation = &"neutral"
+
+[node name="Effect" type="Sprite2D" parent="."]
