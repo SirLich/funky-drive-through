@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://cxhnkijr3r6v5"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_iq4jb"]
-[ext_resource type="Texture2D" uid="uid://bldnjnijkl5f0" path="res://assets/background_menu.png" id="2_pk0yp"]
-[ext_resource type="Texture2D" uid="uid://daiaoq7qr7b3t" path="res://assets/audio_resources/button.tres" id="3_sf6ye"]
-[ext_resource type="AudioStream" uid="uid://dc5jltp41cf8q" path="res://assets/sounds/background_menu_1-2_loop.wav" id="4_3yigo"]
+[ext_resource type="Texture2D" uid="uid://bldnjnijkl5f0" path="res://assets/frames/background_menu.png" id="2_pk0yp"]
+[ext_resource type="Texture2D" uid="uid://daiaoq7qr7b3t" path="res://assets/misc/button.tres" id="3_sf6ye"]
+[ext_resource type="AudioStream" uid="uid://dc5jltp41cf8q" path="res://assets/audio/music/menu_song.wav" id="4_3yigo"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nve3i"]
 load_path = "res://.godot/imported/frame.png-b49da370ab5b416325f31bcd38e64bfc.ctex"

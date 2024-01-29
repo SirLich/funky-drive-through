@@ -1,0 +1,400 @@
+[gd_scene load_steps=27 format=3 uid="uid://dhge2q7r58cps"]
+
+[ext_resource type="Script" path="res://scenes/animals/animal.gd" id="1_gxndi"]
+[ext_resource type="AudioStream" uid="uid://c528q4k8es2og" path="res://assets/audio/sfx/walrus/walrus_good.wav" id="2_osnu5"]
+[ext_resource type="Texture2D" uid="uid://c180gby024nif" path="res://assets/characters/walrus/neck_angry.png" id="2_xwevo"]
+[ext_resource type="AudioStream" uid="uid://cc13m8vv8ttmr" path="res://assets/audio/sfx/walrus/walrus_happy.wav" id="3_3q7t4"]
+[ext_resource type="Texture2D" uid="uid://5ag1peivml5w" path="res://assets/characters/walrus/neck_happy.png" id="3_lmqjh"]
+[ext_resource type="Texture2D" uid="uid://dv3s5045hhv5d" path="res://assets/characters/walrus/neck_neutral.png" id="4_hreni"]
+[ext_resource type="AudioStream" uid="uid://cwriyjmwx2mec" path="res://assets/audio/sfx/walrus/walrus_happy_2.wav" id="4_y1n63"]
+[ext_resource type="AudioStream" uid="uid://bp7j1nddo5mmb" path="res://assets/audio/sfx/walrus/walrus_bad.wav" id="5_mhjt8"]
+[ext_resource type="Texture2D" uid="uid://ck5icbkhet5l2" path="res://assets/characters/walrus/face_back_angry.png" id="5_s28m5"]
+[ext_resource type="AudioStream" uid="uid://n8bvddjucn3f" path="res://assets/audio/sfx/walrus/walrus_angry_1.wav" id="6_d8hmu"]
+[ext_resource type="Texture2D" uid="uid://cot50bpvwb1tt" path="res://assets/characters/walrus/face_back_happy.png" id="6_mtei3"]
+[ext_resource type="AudioStream" uid="uid://tov78kvw5mj3" path="res://assets/audio/sfx/walrus/walrus_angry_2.wav" id="7_b6slq"]
+[ext_resource type="Texture2D" uid="uid://dmpd7vf58offt" path="res://assets/characters/walrus/face_back_neutral.png" id="7_qy50y"]
+[ext_resource type="Texture2D" uid="uid://ceq7mo2qp3xy" path="res://assets/characters/walrus/face_front_angry.png" id="8_b3udw"]
+[ext_resource type="Texture2D" uid="uid://d4cjpn0lawwa" path="res://assets/characters/walrus/face_front_happy.png" id="9_vg35l"]
+[ext_resource type="Texture2D" uid="uid://ctiq3tbgaixfc" path="res://assets/characters/walrus/face_front_neutral.png" id="10_clg68"]
+
+[sub_resource type="Animation" id="Animation_2bikj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Neck:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"neutral"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FaceGroup/FaceBack:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"neutral"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FaceGroup/FaceFront:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"neutral"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FaceGroup:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FaceGroup:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Neck:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mkamw"]
+resource_name = "angry"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Neck:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"angry"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FaceGroup/FaceBack:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"angry"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FaceGroup/FaceFront:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"angry"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FaceGroup:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.322886, -0.214675, -0.0541052, 0.268781, -0.162316, 0.16057, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_we27v"]
+resource_name = "happy"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Neck:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"happy"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FaceGroup/FaceBack:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"happy"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FaceGroup/FaceFront:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"happy"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Neck:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.105, 1.105), Vector2(1, 1), Vector2(1.105, 1.105), Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FaceGroup:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-11, 40), Vector2(0, 0), Vector2(-11, 40), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jwwn5"]
+resource_name = "neutral"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Neck:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"neutral"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FaceGroup/FaceBack:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"neutral"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FaceGroup/FaceFront:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"neutral"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FaceGroup:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(4, 45), Vector2(0, -36)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i341x"]
+_data = {
+"RESET": SubResource("Animation_2bikj"),
+"angry": SubResource("Animation_mkamw"),
+"happy": SubResource("Animation_we27v"),
+"neutral": SubResource("Animation_jwwn5")
+}
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_3unuu"]
+random_pitch = 1.2
+streams_count = 3
+stream_0/stream = ExtResource("2_osnu5")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("3_3q7t4")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("4_y1n63")
+stream_2/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_c3oo3"]
+random_pitch = 1.2
+streams_count = 3
+stream_0/stream = ExtResource("5_mhjt8")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("6_d8hmu")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("7_b6slq")
+stream_2/weight = 1.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8nq4f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xwevo")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_lmqjh")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hreni")
+}],
+"loop": true,
+"name": &"neutral",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ymfdg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_s28m5")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_mtei3")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_qy50y")
+}],
+"loop": true,
+"name": &"neutral",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f60wr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_b3udw")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_vg35l")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_clg68")
+}],
+"loop": true,
+"name": &"neutral",
+"speed": 5.0
+}]
+
+[node name="Walrus" type="Node2D"]
+script = ExtResource("1_gxndi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+process_mode = 3
+libraries = {
+"": SubResource("AnimationLibrary_i341x")
+}
+
+[node name="HappySound" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_3unuu")
+
+[node name="AngrySound" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_c3oo3")
+
+[node name="Neck" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.309804, 0.301961, 0.427451, 1)
+sprite_frames = SubResource("SpriteFrames_8nq4f")
+animation = &"neutral"
+
+[node name="FaceGroup" type="Node2D" parent="."]
+
+[node name="FaceBack" type="AnimatedSprite2D" parent="FaceGroup"]
+modulate = Color(0.717647, 0.517647, 0.415686, 1)
+sprite_frames = SubResource("SpriteFrames_ymfdg")
+animation = &"neutral"
+
+[node name="FaceFront" type="AnimatedSprite2D" parent="FaceGroup"]
+modulate = Color(0.309804, 0.301961, 0.427451, 1)
+sprite_frames = SubResource("SpriteFrames_f60wr")
+animation = &"neutral"

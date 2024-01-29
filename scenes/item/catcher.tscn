@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://scenes/item/catcher.gd" id="1_jd7dh"]
 [ext_resource type="PackedScene" uid="uid://cwo33wdcofuqm" path="res://scenes/item/stacked_item.tscn" id="2_b1twt"]
-[ext_resource type="AudioStream" uid="uid://dost0mxm307gd" path="res://assets/audio_resources/impact_soft.tres" id="3_34njf"]
-[ext_resource type="Resource" uid="uid://d1yfrpmdvv4ii" path="res://item_types/bread_bottom.tres" id="3_onxk0"]
-[ext_resource type="Texture2D" uid="uid://dn8oa5n26mhqs" path="res://assets/plate.png" id="4_5c14n"]
+[ext_resource type="AudioStream" uid="uid://dost0mxm307gd" path="res://assets/audio/resources/impact_soft.tres" id="3_34njf"]
+[ext_resource type="Resource" uid="uid://d1yfrpmdvv4ii" path="res://resources/item_types/bread_bottom.tres" id="3_onxk0"]
+[ext_resource type="Texture2D" uid="uid://dn8oa5n26mhqs" path="res://assets/misc/plate.png" id="4_5c14n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v15wv"]
 radius = 40.4969
