@@ -1,10 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://dhge2q7r58cps"]
+[gd_scene load_steps=29 format=3 uid="uid://dhge2q7r58cps"]
 
 [ext_resource type="Script" path="res://scenes/animals/animal.gd" id="1_gxndi"]
 [ext_resource type="Texture2D" uid="uid://dl6w6ngfej4fv" path="res://assets/characters/effects/walrus_angry_effect.png" id="2_2l2d5"]
 [ext_resource type="AudioStream" uid="uid://c528q4k8es2og" path="res://assets/audio/sfx/walrus/walrus_good.wav" id="2_osnu5"]
 [ext_resource type="Texture2D" uid="uid://c180gby024nif" path="res://assets/characters/walrus/neck_angry.png" id="2_xwevo"]
 [ext_resource type="AudioStream" uid="uid://cc13m8vv8ttmr" path="res://assets/audio/sfx/walrus/walrus_happy.wav" id="3_3q7t4"]
+[ext_resource type="Texture2D" uid="uid://dwpl2l2nq7vaj" path="res://assets/characters/effects/walrus_happy_effect.png" id="3_7r678"]
 [ext_resource type="Texture2D" uid="uid://5ag1peivml5w" path="res://assets/characters/walrus/neck_happy.png" id="3_lmqjh"]
 [ext_resource type="Texture2D" uid="uid://dv3s5045hhv5d" path="res://assets/characters/walrus/neck_neutral.png" id="4_hreni"]
 [ext_resource type="AudioStream" uid="uid://cwriyjmwx2mec" path="res://assets/audio/sfx/walrus/walrus_happy_2.wav" id="4_y1n63"]
@@ -139,6 +140,18 @@ tracks/9/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Effect:flip_h")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_mkamw"]
@@ -301,6 +314,42 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(-11, 40), Vector2(0, 0), Vector2(-11, 40), Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Effect:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_7r678")]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Effect:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.737255, 0.0745098, 0.439216, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Effect:flip_h")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
 }
 
 [sub_resource type="Animation" id="Animation_jwwn5"]
