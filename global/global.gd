@@ -1,6 +1,5 @@
 extends Node
 
-# TODO: This could be generated...
 @export var all_items : Array[ItemType]
 @export var top_bun : ItemType
 @export var recipes : Array[Recipe]

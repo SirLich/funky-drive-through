@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cxhnkijr3r6v5"]
+[gd_scene load_steps=9 format=3 uid="uid://cxhnkijr3r6v5"]
 
 [ext_resource type="Script" path="res://scenes/ui/menu/menu.gd" id="1_5uuxi"]
 [ext_resource type="Texture2D" uid="uid://bldnjnijkl5f0" path="res://assets/frames/background_menu.png" id="2_03tnl"]
+[ext_resource type="PackedScene" uid="uid://dcfett6ns4vqq" path="res://scenes/game.tscn" id="2_73ifh"]
 [ext_resource type="Texture2D" uid="uid://daiaoq7qr7b3t" path="res://assets/misc/button.tres" id="3_ive1g"]
 [ext_resource type="AudioStream" uid="uid://dc5jltp41cf8q" path="res://assets/audio/music/menu_song.wav" id="4_i5ue1"]
 
@@ -24,6 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5uuxi")
+game_scene = ExtResource("2_73ifh")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
