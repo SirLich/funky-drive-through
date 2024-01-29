@@ -166,10 +166,10 @@ func _on_finish_button_pressed() -> void:
 		Global.current_recipe += 1
 		
 		if Global.current_recipe >= Global.recipes.size():
-			get_tree().change_scene_to_file("res://menu.tscn")
+			get_tree().change_scene_to_file("res://scenes/ui/menu/menu.tscn")
 		else:
 			$HUD/UIAnimation.play("begin")
 			Global.current_recipe
-			get_tree().change_scene_to_file("res://game.tscn")
+			get_tree().change_scene_to_file("res://scenes/game.tscn")
 	else:
-		get_tree().change_scene_to_file("res://game.tscn")
+		get_tree().change_scene_to_file("res://scenes/game.tscn")
