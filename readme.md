@@ -2,6 +2,11 @@
 
 This game was created onsite in Munich for [Global Game Jam 2024] with theme "Make Me Laugh". You can play it on [itch.io here.](https://sirlich.itch.io/funky-drive-through)
 
+![](img/main.webp)
+![](img/bird.webp)
+![](img/walrus.webp)
+
+
 ## Credits
 
  - Programming: Liam (SirLich)
